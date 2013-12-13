@@ -1,0 +1,172 @@
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Caching\PerformanceCounters.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe.config
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\UsageOAuthTestWebDemo.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\UsageOAuthTestWebDemo.pdb
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\CEDataServiceContract.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.AzureClientHelper.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.AzureCommon.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.Client.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.Core.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Data.Edm.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Data.OData.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Web.DistributedCache.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Storage.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsFabric.Common.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsFabric.Data.Common.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Newtonsoft.Json.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\SageNA.CE.UM.Client.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\SageNA.CE.UMClientInterface.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.Formatting.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.WebRequest.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Spatial.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Helpers.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Http.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Http.WebHost.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Mvc.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Razor.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.Razor.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Diagnostics.StorageUtility.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.AzureCommon.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.Client.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.Core.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Data.Edm.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Data.OData.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Storage.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Spatial.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Helpers.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Mvc.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Razor.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.Razor.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Newtonsoft.Json.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.Formatting.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.WebRequest.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Http.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Http.WebHost.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Diagnostics.xml
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\de\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\es\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\it\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\de\System.Spatial.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\es\System.Spatial.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\fr\System.Spatial.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\it\System.Spatial.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\ja\System.Spatial.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\ko\System.Spatial.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\ru\System.Spatial.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hans\System.Spatial.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hant\System.Spatial.resources.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\obj\Debug\UsageOAuthTestWebDemo.csprojResolveAssemblyReference.cache
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\obj\Debug\UsageOAuthTestWebDemo.dll
+C:\Prototypes\Sage CRM\SageCRMTestWeb\UsageOAuthTestWeb\obj\Debug\UsageOAuthTestWebDemo.pdb
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Caching\PerformanceCounters.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe.config
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\UsageOAuthTestWebDemo.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\UsageOAuthTestWebDemo.pdb
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\CEDataServiceContract.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.AzureClientHelper.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.AzureCommon.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.Client.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.Core.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Data.Edm.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Data.OData.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Web.DistributedCache.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Storage.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsFabric.Common.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsFabric.Data.Common.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Newtonsoft.Json.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\SageNA.CE.UM.Client.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\SageNA.CE.UMClientInterface.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.Formatting.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.WebRequest.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Spatial.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Helpers.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Http.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Http.WebHost.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Mvc.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Razor.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.Razor.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Diagnostics.StorageUtility.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.AzureCommon.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.Client.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.ApplicationServer.Caching.Core.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Data.Edm.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.Data.OData.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Storage.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Spatial.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Helpers.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Mvc.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Razor.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.WebPages.Razor.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Newtonsoft.Json.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.Formatting.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Net.Http.WebRequest.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Http.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\System.Web.Http.WebHost.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\Microsoft.WindowsAzure.Diagnostics.xml
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\de\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\es\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\it\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\de\System.Spatial.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\es\System.Spatial.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\fr\System.Spatial.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\it\System.Spatial.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\ja\System.Spatial.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\ko\System.Spatial.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\ru\System.Spatial.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hans\System.Spatial.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\bin\zh-Hant\System.Spatial.resources.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\obj\Debug\UsageOAuthTestWebDemo.csprojResolveAssemblyReference.cache
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\obj\Debug\UsageOAuthTestWebDemo.dll
+C:\Prototypes\Sage Fixed Assets Online\SageCRMTestWeb\UsageOAuthTestWeb\obj\Debug\UsageOAuthTestWebDemo.pdb

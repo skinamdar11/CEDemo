@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "DemoContent";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+    <p>
+        Welcome to CE Web Test App. You can now start to use your Sage ID to log in. <br/>
+        Return to this web application to invite or manage user or reset your password.  <br/>
+    </p>
+    <!-- TODO: Remove the following info. Use "View Source" in browser to see these details during development -->
+        <div style="display:none;">
+            PersonInfo: <span>@ViewBag.PersonInfo</span>
+        </div>
+</article>
+
+<aside>
+    <h3>Simple Nav</h3>
+    <p>
+        Click here to sign out.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Log Out", "Logout", "CEWebDemo")</li>
+    </ul>
+</aside>
