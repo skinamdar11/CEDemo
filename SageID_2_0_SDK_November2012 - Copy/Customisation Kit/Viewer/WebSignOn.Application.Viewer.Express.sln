@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSignOn.Application.Viewer.Express", "WebSignOn.Application.Viewer.Express.csproj", "{573AB3B4-8E4D-4B5B-8AE2-F4B46D09BC9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{573AB3B4-8E4D-4B5B-8AE2-F4B46D09BC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573AB3B4-8E4D-4B5B-8AE2-F4B46D09BC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573AB3B4-8E4D-4B5B-8AE2-F4B46D09BC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573AB3B4-8E4D-4B5B-8AE2-F4B46D09BC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

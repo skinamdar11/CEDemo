@@ -1,0 +1,187 @@
+﻿/*	
+	BASIC SSO OAuth template style sheet
+	The classes below are an example and can be modified / added to as 
+	individual teams see fit.
+*/
+body
+{
+	background: #ffffff;
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+}
+
+a 
+{
+	color: #024731;
+	text-decoration: underline;
+}
+
+a:hover 
+{
+	color: #008469;
+}
+
+img 
+{
+	border: none;
+}
+
+/* 
+	Text boxes - SSO fields
+*/
+#sso_Email
+{
+	width: 295px;
+}
+#sso_Password, #sso_NewPassword
+{
+	width: 295px;
+}
+#sso_Captcha 
+{
+	width: 295px;
+}
+#sso_ConfirmPassword
+{
+	width: 295px;
+}
+#sso_DisplayName
+{
+	width: 295px;
+}
+#sso_SecurityAnswer1, #sso_SecurityAnswer2, #sso_SecurityAnswer3 
+{
+	width: 295px;
+}
+.fixed_label_width 
+{
+	width: 3.8em;
+	float: left;
+	margin-right: 0.5em;
+	display: block
+}
+
+/* 
+	Button Styles - Submit buttons
+*/
+.submit
+{
+    background: transparent url(/Images/bg_button.png) no-repeat;
+    display: inline-block;
+    border: none;
+    height: 29px;
+    width: 94px;
+    margin: 12px 0px 6px;
+    padding: 2px 5px 4px;
+    line-height: 23px;
+    color: #024731;
+    cursor: pointer;
+}
+.submit:hover
+{
+    background: url(/Images/bg_button.png) 0 -29px no-repeat;
+}
+.submit140
+{
+    background: transparent url(/Images/bg_button_140.png) no-repeat;
+    display: inline-block;
+    border: none;
+    height: 29px;
+    width: 140px;
+    margin: 12px 0px 6px;
+    padding: 2px 8px 4px;
+    line-height: 23px;
+    color: #024731;
+    cursor: pointer;
+}
+.submit140:hover
+{
+    background: url(/Images/bg_button_140.png) 0 -29px no-repeat;
+}
+
+.submit_secondary
+{
+    background: transparent url(/Images/bg_button.png) no-repeat;
+    display: inline-block;
+    border: none;
+    height: 29px !important;
+    width: 94px;
+    padding: 2px 5px 4px;
+    line-height: 23px;
+    color: #414141 !important;
+    cursor: pointer;
+}
+.submit_secondary:hover
+{
+    background: url(/Images/bg_button.png) 0 -29px no-repeat;
+}
+/* 
+	Button Styles - Cancel buttons
+*/
+.cancel 
+{
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 13px;
+	background: transparent url(/Images/bg_button.png) no-repeat scroll 0 0;
+	border: medium none;
+	color: #024731;
+	cursor: pointer;
+	display: inline-block;
+	height: 23px;
+	line-height: 23px;
+	margin: 12px 2px 6px 12px;
+	padding: 3px 0;
+	text-align: center;
+	text-decoration: none;
+	width: 94px;
+}
+.cancel:hover
+{
+    background: url(/Images/bg_button.png) 0 -29px no-repeat;
+    color: #024731;
+}
+
+/* 
+	Validation 
+*/
+.field-validation-error
+{
+	line-height: 24px;
+	vertical-align: bottom !important;
+	color: #ff0000 !important;
+	padding-left: 22px !important;
+	background: url(/Images/val_t.png) no-repeat scroll 0px 0px !important;
+	display: none;
+}
+.input-validation-error
+{
+	border: 1px solid #ff0000;
+	background-color: #ffeeee;
+}
+.validation-summary-errors
+{
+	color: #ff0000;
+	padding-bottom: 15px;
+}
+#validationSummary 
+{
+	margin-top: 10px;
+}
+.validation-summary-errors li
+{
+	margin-top: 10px;
+	margin-bottom: -5px;
+}
+
+.applist li 
+{
+	margin-top: 0px;
+	margin-bottom: -10px;
+}
+.applist
+{
+	margin-bottom: 20px;
+}

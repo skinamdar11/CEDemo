@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by DAVE BANKS (SAGE UK LTD) -->
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="Guid.xsd"/>
+	<xs:include schemaLocation="Principal.xsd"/>
+	<xs:include schemaLocation="Updateable.xsd"/>
+	<xs:include schemaLocation="CultureSpecificValue.xsd"/>
+	<xs:element name="WebApplication" type="tns:WebApplication">
+		<xs:annotation>
+			<xs:documentation>An element which defines a web application which integrates with SageSSO and the options which control sign-on behaviour for the application.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="WebApplication">
+		<xs:annotation>
+			<xs:documentation>A type which defines a web application which integrates with SageSSO and the options which control sign-on behaviour for the application.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tns:Updateable">
+				<xs:sequence>
+					<xs:element name="Id" type="ms:guid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The unique ID for this web application. Note that this does not necessarily match the ID of the X509Principal which represents the web application to SSO or other services.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="AutomaticSignOnMode" type="tns:AutomaticSignOnMode" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>An enumeration which defines the automatic sign-on behaviour for a web application.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DisplayNames" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A list of culture-specific display names for the web application. A name from this list will be displayed to the user when signing onto the web application.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="DisplayName" type="tns:CultureSpecificValue" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:documentation>A culture-specific display name for the web application.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="X509Principal" type="tns:X509Principal" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The X509 identity which represents this web application to SageSSO and web services and applications which integrate with SageSSO.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="NotificationUri" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The web application URI to which notifications regarding SageSSO sessions will be sent for the web application.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SupportNonActivatedSignOn" type="xs:boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Indicates whether or not the web application supports sign-on by non-activated accounts.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TemplateName" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Web SSO template name for customisation of the web sign on application sign in process.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CaptchaTheme" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Web SSO ReCAPTCHA theme name for the theme that will be used, by default, for CAPTCHAs displayed for the web application.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="MaxAnonymousSignOnAttemptsBeforeCaptcha" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The number of sign-on attempts allowed by an anonymous (unknown) identity before a CAPTCHA should be displayed.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="MaxAnonymousSignOnAttemptsBeforeFailure" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The number of sign-on attempts allowed by an anonymous (unknown) identity before the sign-on attempt is aborted.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="AccountPolicyName" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The name of the Account Policy assigned to this web application. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SendsOwnActivationEmails" type="xs:boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Indicates whether or not the web application is responsible for sending its own activation emails.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ActivationLinkTimeout" type="xs:duration" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The period during which the link is considered valid if the maximum number of activations has not been exceeded.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ActivationLinkLinger" type="xs:duration" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The additional period of time the link will be held in the system in an invalid state before it is culled.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ActivationExitUri" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The URI to which the user\'s browser will be redirected after an activation link is clicked and processed by Sage SSO.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="AllowTransparentRegistration" type="xs:boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Indicates whether to allow transparent registration to this application during sign-on.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="EmailConfiguration" type="tns:EmailConfiguration" minOccurs="0" maxOccurs="32"/>
+					<xs:element name="NotificationSubscriptionId" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The package subscription Id for a gateway client if notifications are being sent via the gateway.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Moniker" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The short name for the web application. Used when issuing access tokens during an OAuth authorisation.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="OpCo" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Op Co.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="BusinessUnit" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The business unit.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="AutomaticSignOnMode">
+		<xs:annotation>
+			<xs:documentation>An enumeration which defines the automatic sign-on behaviour for a web application.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AlwaysAutomaticSignOn">
+				<xs:annotation>
+					<xs:documentation>A user will always be automatically signed onto the web application if an SSO session for that user already exists.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OptionalAutomaticSignOn">
+				<xs:annotation>
+					<xs:documentation>A user will be given the option to be automatically signed onto the web application if an SSO session for that user already exists.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NoAutomaticSignOn">
+				<xs:annotation>
+					<xs:documentation>A user will always be shown the sign on confirmation page before signing onto the web application if an SSO session for that user already exists. The user will not have the option to bypass the confirmation page for future sign ons.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AlwaysRequestCredentials">
+				<xs:annotation>
+					<xs:documentation>The user will always be prompted for credentials before signing onto the web application whether or not an SSO session for that user. The user will not have the option to bypass the confirmation page for future sign ons.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="WebApplicationEmailConfiguration">
+		<xs:annotation>
+			<xs:documentation>A type which defines the email configuration for a web application.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Id" type="xs:long" minOccurs="0"/>
+			<xs:element name="TemplateName" type="xs:string"/>
+			<xs:element name="FromAddress" type="xs:string"/>
+			<xs:element name="FromName" type="xs:string"/>
+			<xs:element name="SubjectNames" type="tns:CultureSpecificValue" minOccurs="0" maxOccurs="32"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="WebApplicationEmailConfiguration" type="tns:EmailConfiguration">
+		<xs:annotation>
+			<xs:documentation>An element which defines the email configuration for a web application.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="EmailType">
+		<xs:annotation>
+			<xs:documentation>An enumeration which defines the type of email.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Activation"/>
+			<xs:enumeration value="PasswordRecovery"/>
+			<xs:enumeration value="PasswordChangedNotification"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="EmailConfiguration" type="tns:EmailConfiguration">
+		<xs:annotation>
+			<xs:documentation>An element which represents configuration for an email.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="EmailConfiguration">
+		<xs:annotation>
+			<xs:documentation>A type which represents configuration for an email.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="EmailType" type="tns:EmailType">
+				<xs:annotation>
+					<xs:documentation>The type of email.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Configuration" type="tns:WebApplicationEmailConfiguration">
+				<xs:annotation>
+					<xs:documentation>The email configuration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AccessTokenEncryptionKey">
+		<xs:annotation>
+			<xs:documentation>A type which represents a key used to encrypt web application access tokens.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Key" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The Base64 encoded encryption key value.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IV" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The Base64 encoded initialization vector.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AccessTokenEncryptionKey" type="tns:AccessTokenEncryptionKey">
+		<xs:annotation>
+			<xs:documentation>An element which represents a key used to encrypt web application access tokens.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

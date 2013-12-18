@@ -1,0 +1,17 @@
+﻿#effective_validity_icon 
+{
+	float: left;
+	padding-right: 8px;
+	padding-top: 3px;
+}
+
+.permissionSet
+{
+    border:1px solid #bbbbbb;
+    padding:10px;
+    margin:20px;
+}
+
+.resourceAuthorisation
+{
+}

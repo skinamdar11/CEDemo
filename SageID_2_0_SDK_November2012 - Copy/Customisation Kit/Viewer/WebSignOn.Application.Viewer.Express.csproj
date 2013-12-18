@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{573AB3B4-8E4D-4B5B-8AE2-F4B46D09BC9A}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebSignOn.Application</RootNamespace>
+    <AssemblyName>WebSignOn.Application.Viewer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SSO.Views.Shared, Version=0.0.0.0, Culture=neutral, PublicKeyToken=9878639261d24312, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Precompiled\bin\SSO.Views.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebSignOn.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9878639261d24312, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Precompiled\bin\WebSignOn.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSignOn.Application.Resources, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9878639261d24312, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Precompiled\bin\WebSignOn.Application.Resources.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\OAuthViewerController.cs" />
+    <Compile Include="Controllers\SecurityQuestions.cs" />
+    <Compile Include="Controllers\SSOViewerController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlobalSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\basic.css" />
+    <Content Include="Content\confirm.css" />
+    <Content Include="Content\ie6fix.css" />
+    <Content Include="Content\ie7fix.css" />
+    <Content Include="Content\iphone_basic.css" />
+    <Content Include="Content\iphone_confirm.css" />
+    <Content Include="Content\iphone_signon.css" />
+    <Content Include="Content\oauth.css" />
+    <Content Include="Content\oauth_confirm.css" />
+    <Content Include="Content\print.css" />
+    <Content Include="Content\signon.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\bck.jpg" />
+    <Content Include="Images\bck2.png" />
+    <Content Include="Images\clock.png" />
+    <Content Include="Images\sagecj.gif" />
+    <Content Include="Images\sageLogo80.gif" />
+    <Content Include="Images\sageLogo80_de.gif" />
+    <Content Include="Images\sageLogo80_fr.gif" />
+    <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jquery.simplemodal-1.3.5.min.js" />
+    <Content Include="TemplateOAuth\Basic\confirm.css" />
+    <Content Include="TemplateOAuth\Basic\favicon.ico" />
+    <Content Include="TemplateOAuth\Basic\style.css" />
+    <Content Include="TemplateOAuth\Sage\confirm.css" />
+    <Content Include="TemplateOAuth\Sage\favicon.ico" />
+    <Content Include="TemplateOAuth\Sage\style.css" />
+    <Content Include="Template\Basic\confirm.css" />
+    <Content Include="Template\Basic\favicon.ico" />
+    <Content Include="Template\Basic\style.css" />
+    <Content Include="Template\Sage\basic.css" />
+    <Content Include="Template\Sage\confirm.css" />
+    <Content Include="Template\Sage\favicon.ico" />
+    <Content Include="Template\Sage\images\bck.jpg" />
+    <Content Include="Template\Sage\images\bg_button.png" />
+    <Content Include="Template\Sage\images\bg_button_140.png" />
+    <Content Include="Template\Sage\images\cbutton.gif" />
+    <Content Include="Template\Sage\images\cheader.gif" />
+    <Content Include="Template\Sage\images\padlock.jpg" />
+    <Content Include="Template\Sage\images\sageclearzone.gif" />
+    <Content Include="Template\Sage\images\sageLogo80.gif" />
+    <Content Include="Template\Sage\images\sageLogo80_de.gif" />
+    <Content Include="Template\Sage\images\sageLogo80_fr.gif" />
+    <Content Include="Template\Sage\images\spacer.gif" />
+    <Content Include="Template\Sage\images\val_t.png" />
+    <Content Include="Template\Sage\style.css" />
+    <Content Include="Views\OAuthViewer\Basic\Authenticate.aspx" />
+    <Content Include="Views\OAuthViewer\Basic\Authorise.aspx" />
+    <Content Include="Views\OAuthViewer\Sage\Authenticate.aspx" />
+    <Content Include="Views\OAuthViewer\Sage\Authorise.aspx" />
+    <Content Include="Views\Shared\Default\Index.aspx" />
+    <Content Include="Views\Shared\OAuthAllow.ascx" />
+    <Content Include="Views\Shared\OAuthAuthoriseValidationScript.ascx" />
+    <Content Include="Views\Shared\OAuthAuthoriseValidationSummary.ascx" />
+    <Content Include="Views\Shared\OAuthDeny.ascx" />
+    <Content Include="Views\Shared\OAuthPermissionList.ascx" />
+    <Content Include="Views\Shared\SSOCancel.ascx" />
+    <Content Include="Views\Shared\SSOCaptcha.ascx" />
+    <Content Include="Views\Shared\SSOChangeValidationScript.ascx" />
+    <Content Include="Views\Shared\SSOChangeValidationSummary.ascx" />
+    <Content Include="Views\Shared\SSOContinue.ascx" />
+    <Content Include="Views\Shared\SSOForgotPasswordLink.ascx" />
+    <Content Include="Views\Shared\SSOForgotPasswordLinkListItem.ascx" />
+    <Content Include="Views\Shared\SSONewPassword.ascx" />
+    <Content Include="Views\Shared\SSORecoveryAnswer1.ascx" />
+    <Content Include="Views\Shared\SSORecoveryAnswer2.ascx" />
+    <Content Include="Views\Shared\SSORecoveryStage1ValidationScript.ascx" />
+    <Content Include="Views\Shared\SSORecoveryStage1ValidationSummary.ascx" />
+    <Content Include="Views\Shared\SSORecoveryStage2ValidationScript.ascx" />
+    <Content Include="Views\Shared\SSORecoveryStage2ValidationSummary.ascx" />
+    <Content Include="Views\Shared\SSORecoveryStage3ValidationScript.ascx" />
+    <Content Include="Views\Shared\SSORecoveryStage3ValidationSummary.ascx" />
+    <Content Include="Views\Shared\SSOSignIn.ascx" />
+    <Content Include="Views\Shared\SSOPassword.ascx" />
+    <Content Include="Views\SSOViewer\Basic\Change.aspx" />
+    <Content Include="Views\SSOViewer\Basic\ChangePasswordOnly.aspx" />
+    <Content Include="Views\SSOViewer\Basic\RecoveryStage1.aspx" />
+    <Content Include="Views\SSOViewer\Basic\RecoveryStage2.aspx" />
+    <Content Include="Views\SSOViewer\Basic\RecoveryStage3.aspx" />
+    <Content Include="Views\SSOViewer\Basic\RegisterCustomCaptchaDemo.aspx" />
+    <Content Include="Views\SSOViewer\Sage\Change.aspx" />
+    <Content Include="Views\SSOViewer\Sage\ChangePasswordOnly.aspx" />
+    <Content Include="Views\SSOViewer\Sage\RecoveryStage1.aspx" />
+    <Content Include="Views\SSOViewer\Sage\RecoveryStage2.aspx" />
+    <Content Include="Views\SSOViewer\Sage\RecoveryStage3.aspx" />
+    <Content Include="Views\SSOViewer\Sage\Register.aspx" />
+    <Content Include="Views\SSOViewer\Sage\RegisterCustomCaptchaDemo.aspx" />
+    <Content Include="Views\SSOViewer\Sage\SelectLanguage.aspx" />
+    <Content Include="Views\SSOViewer\Sage\SignOn.aspx" />
+    <Content Include="Views\SSOViewer\Sage\SignOnAdditional.aspx" />
+    <Content Include="Views\SSOViewer\Sage\SignOnExpress.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\about.png" />
+    <Content Include="Images\about2.png" />
+    <Content Include="Images\appA.png" />
+    <Content Include="Images\appB.png" />
+    <Content Include="Images\bg_button.png" />
+    <Content Include="Images\bg_button_140.png" />
+    <Content Include="Images\body_background_ourBusiness.gif" />
+    <Content Include="Images\bubble.gif" />
+    <Content Include="Images\bubbles.gif" />
+    <Content Include="Images\bubble_filler.gif" />
+    <Content Include="Images\bubble_fillers.gif" />
+    <Content Include="Images\bullet-024731.gif" />
+    <Content Include="Images\bullet-green.gif" />
+    <Content Include="Images\captcha.png" />
+    <Content Include="Images\captchap.png" />
+    <Content Include="Images\captchar.png" />
+    <Content Include="Images\cbutton.gif" />
+    <Content Include="Images\cheader.gif" />
+    <Content Include="Images\contentBackBot.png" />
+    <Content Include="Images\contentBackMid.png" />
+    <Content Include="Images\contentBackTop.png" />
+    <Content Include="Images\findOutMoreShape_background.gif" />
+    <Content Include="Images\f_de.png" />
+    <Content Include="Images\f_de_d.png" />
+    <Content Include="Images\f_de_m.png" />
+    <Content Include="Images\f_de_m_d.png" />
+    <Content Include="Images\f_fr.png" />
+    <Content Include="Images\f_fr_d.png" />
+    <Content Include="Images\f_fr_m.png" />
+    <Content Include="Images\f_fr_m_d.png" />
+    <Content Include="Images\f_gb.png" />
+    <Content Include="Images\f_gb_d.png" />
+    <Content Include="Images\f_gb_m.png" />
+    <Content Include="Images\f_gb_m_d.png" />
+    <Content Include="Images\f_us.png" />
+    <Content Include="Images\f_us_d.png" />
+    <Content Include="Images\f_us_m.png" />
+    <Content Include="Images\f_us_m_d.png" />
+    <Content Include="Images\gobutton.gif" />
+    <Content Include="Images\greenBackLarge.png" />
+    <Content Include="Images\greyBck.gif" />
+    <Content Include="Images\greyBck2.gif" />
+    <Content Include="Images\h3arrowV3.gif" />
+    <Content Include="Images\headerBackTileL.gif" />
+    <Content Include="Images\headerBackTileR.gif" />
+    <Content Include="Images\index.png" />
+    <Content Include="Images\index_a_iphone.png" />
+    <Content Include="Images\index_b.gif" />
+    <Content Include="Images\index_b_iphone.png" />
+    <Content Include="Images\index_l.gif" />
+    <Content Include="Images\index_r.gif" />
+    <Content Include="Images\index_t.gif" />
+    <Content Include="Images\langsel.gif" />
+    <Content Include="Images\ourBusinessShape_background.gif" />
+    <Content Include="Images\padlock.jpg" />
+    <Content Include="Images\right_margin_image_staff009.gif" />
+    <Content Include="Images\sageclearzone.gif" />
+    <Content Include="Images\sageLogo80.png" />
+    <Content Include="Images\sageLogo80iphone.png" />
+    <Content Include="Images\sageLogo80iphone_de.png" />
+    <Content Include="Images\sageLogo80iphone_fr.png" />
+    <Content Include="Images\sageLogo80_de.png" />
+    <Content Include="Images\sageLogo80_fr.png" />
+    <Content Include="Images\sageShopShape_Background.gif" />
+    <Content Include="Images\sageWorldwide_background.gif" />
+    <Content Include="Images\sage_title_iphone.png" />
+    <Content Include="Images\search.gif" />
+    <Content Include="Images\spacer.gif" />
+    <Content Include="Images\thirdlevelnav_background.gif" />
+    <Content Include="Images\thisSectionBackBot.gif" />
+    <Content Include="Images\thisSectionBackBot_iphone.gif" />
+    <Content Include="Images\thisSectionBackmid.gif" />
+    <Content Include="Images\thisSectionBackmid_iphone.gif" />
+    <Content Include="Images\thisSectionBackTop.gif" />
+    <Content Include="Images\thisSectionBackTop_iphone.gif" />
+    <Content Include="Images\val.png" />
+    <Content Include="Images\val_t.png" />
+    <Content Include="Images\val_t_bul.png" />
+    <Content Include="Images\val_t_sml.png" />
+    <Content Include="Images\YO_TopMenuTabs.jpg" />
+    <Content Include="Images\_contentBackBot.gif" />
+    <Content Include="Images\_contentBackBot_iphone.gif" />
+    <Content Include="Images\_contentBackMid.gif" />
+    <Content Include="Images\_contentBackMid_iphone.gif" />
+    <Content Include="Images\_contentBackTop.gif" />
+    <Content Include="Images\_contentBackTop_iphone.gif" />
+    <Content Include="Scripts\confirm.js" />
+    <Content Include="Scripts\csshover3.htc" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\xVal.jquery.validate.js" />
+    <Content Include="Views\Shared\SSOSignInAdditional.ascx" />
+    <Content Include="Views\Shared\SSOAutoSignOn.ascx" />
+    <Content Include="Views\Shared\SSOApplicationList.ascx" />
+    <Content Include="Views\Shared\SSOConfirmSignOutDialog.ascx" />
+    <Content Include="Views\Shared\CultureSwitcherTable.ascx" />
+    <Content Include="Views\Shared\CultureSwitcherPopup.ascx" />
+    <Content Include="Views\Shared\CultureSwitcher.ascx" />
+    <Content Include="Views\Shared\SSOCultureSwitcher.ascx" />
+    <Content Include="Views\Shared\SSORememberMe.ascx" />
+    <Content Include="Views\Shared\SSOSignInValidationScript.ascx" />
+    <Content Include="Views\Shared\SSOSignInValidationSummary.ascx" />
+    <Content Include="Views\Shared\SSOSwitchUserLinkListItem.ascx" />
+    <Content Include="Views\Shared\Template.Master" />
+    <Content Include="Views\SSOViewer\Basic\SelectLanguage.aspx" />
+    <Content Include="Views\SSOViewer\Basic\SignOn.aspx" />
+    <Content Include="Views\SSOViewer\Basic\SignOnAdditional.aspx" />
+    <Content Include="Views\SSOViewer\Basic\SignOnExpress.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\SSOAutoSignOnLabel.ascx" />
+    <Content Include="Views\Shared\SSOConfirmPassword.ascx" />
+    <Content Include="Views\Shared\SSODisplayName.ascx" />
+    <Content Include="Views\Shared\SSOEmail.ascx" />
+    <Content Include="Views\Shared\SSORegister.ascx" />
+    <Content Include="Views\Shared\SSORegisterValidationScript.ascx" />
+    <Content Include="Views\Shared\SSORegisterValidationSummary.ascx" />
+    <Content Include="Views\Shared\SSOSecurityAnswer1.ascx" />
+    <Content Include="Views\Shared\SSOSecurityAnswer2.ascx" />
+    <Content Include="Views\Shared\SSOSecurityAnswer3.ascx" />
+    <Content Include="Views\Shared\SSOSecurityQuestion1.ascx" />
+    <Content Include="Views\Shared\SSOSecurityQuestion2.ascx" />
+    <Content Include="Views\Shared\SSOSecurityQuestion3.ascx" />
+    <Content Include="Views\Shared\SSOSwitchUserLink.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SSOViewer\Basic\App_LocalResources\SignOn.aspx.de.resx" />
+    <Content Include="Views\SSOViewer\Basic\App_LocalResources\SignOn.aspx.fr.resx" />
+    <Content Include="Views\SSOViewer\Basic\App_LocalResources\SignOn.aspx.resx" />
+    <Content Include="Views\SSOViewer\Basic\Register.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Views\SSOViewer\Default\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\Change.aspx.de.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\Change.aspx.fr.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\Change.aspx.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\ChangePasswordOnly.aspx.de.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\ChangePasswordOnly.aspx.fr.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\ChangePasswordOnly.aspx.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\RecoveryStage1.aspx.de.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\RecoveryStage1.aspx.fr.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\RecoveryStage1.aspx.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\RecoveryStage2.aspx.de.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\RecoveryStage2.aspx.fr.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\RecoveryStage2.aspx.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\RecoveryStage3.aspx.de.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\RecoveryStage3.aspx.fr.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\RecoveryStage3.aspx.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\Register.aspx.de.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\Register.aspx.fr.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\Register.aspx.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SelectLanguage.aspx.de.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SelectLanguage.aspx.fr.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SelectLanguage.aspx.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SignOn.aspx.de.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SignOn.aspx.fr.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SignOn.aspx.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SignOnAdditional.aspx.de.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SignOnAdditional.aspx.fr.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SignOnAdditional.aspx.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SignOnExpress.aspx.de.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SignOnExpress.aspx.fr.resx" />
+    <Content Include="Views\SSOViewer\Sage\App_LocalResources\SignOnExpress.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\TemplateOAuth.master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>44366</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <!--<PostBuildEvent>DEL $(TargetDir)App_Global.asax.* /F</PostBuildEvent>-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST "$(TargetDir)App_global.asax.dll" DEL "$(TargetDir)App_global.asax.dll" /F /Q</PostBuildEvent>
+  </PropertyGroup>
+</Project>

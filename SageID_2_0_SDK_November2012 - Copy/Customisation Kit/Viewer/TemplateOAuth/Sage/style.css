@@ -1,0 +1,402 @@
+﻿/*	
+	DEFAULT SSO OAuth template style sheet
+*/
+
+.applist li 
+{
+	margin-top: 0px;
+	margin-bottom: -10px;
+}
+.applist
+{
+	margin-bottom: 20px;
+}
+
+/* 
+	Text boxes - SSO fields
+*/
+#sso_DisplayName
+{
+	width: 270px;
+	padding: 2px;
+}
+#sso_Password, #sso_NewPassword
+{
+	width: 270px;
+	padding: 2px;
+}
+#sso_Captcha 
+{
+	width: 270px;
+	padding: 2px;	
+}
+#sso_ConfirmPassword, #sso_Email
+{
+	width: 270px;
+	padding: 2px;	
+}
+
+.fixed_label_width_oauth
+{
+	float: left;
+	margin-right: 0.5em;
+	padding-top: 0.2em;
+	display: block;
+    width: 7em;
+}
+
+.break 
+{
+	margin-top: 10px;
+}
+
+/* 
+	Button Styles - Submit buttons
+*/
+.submit
+{
+    background: transparent url(/Images/bg_button.png) no-repeat;
+    display: inline-block;
+    border: none;
+    height: 29px;
+    width: 94px;
+    margin: 12px 0px 6px;
+    padding: 2px 5px 4px;
+    line-height: 23px;
+    color: #414141;
+    cursor: pointer;
+}
+.submit:hover
+{
+    background: url(/Images/bg_button.png) 0 -29px no-repeat;
+}
+.submit140
+{
+    background: transparent url(/Images/bg_button_140.png) no-repeat;
+    display: inline-block;
+    border: none;
+    height: 29px;
+    width: 140px;
+    margin: 12px 0px 6px;
+    padding: 2px 8px 4px;
+    line-height: 23px;
+    color: #414141;
+    cursor: pointer;
+}
+.submit140:hover
+{
+    background: url(/Images/bg_button_140.png) 0 -29px no-repeat;
+}
+.submit_secondary
+{
+    background: transparent url(/Images/bg_button.png) no-repeat;
+    display: inline-block;
+    border: none;
+    height: 29px !important;
+    width: 94px;
+    padding: 2px 5px 4px;
+    line-height: 23px;
+    color: #414141 !important;
+    cursor: pointer;
+}
+.submit_secondary:hover
+{
+    background: url(/Images/bg_button.png) 0 -29px no-repeat;
+}
+/* 
+	Button Styles - Cancel buttons
+*/
+.cancel 
+{
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 13px;
+	background: transparent url(/Images/bg_button.png) no-repeat scroll 0 0;
+	border: medium none;
+	color: #414141;
+	cursor: pointer;
+	display: inline-block;
+	height: 23px;
+	line-height: 23px;
+	margin: 12px 2px 6px 12px;
+	padding: 3px 0;
+	text-align: center;
+	text-decoration: none;
+	width: 94px;
+}
+.cancel:hover
+{
+    background: url(/Images/bg_button.png) 0 -29px no-repeat;
+    color: #024731;
+}
+
+body 
+{
+	height:100%;
+	margin:0;
+	padding:0;
+	background: url(/Images/bck.jpg) no-repeat scroll 60% -80px #FFFFFF;	
+}
+/*User Selectable Styles*/
+.Heading1, H1 {
+	color: #008469;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin:0;
+}
+.Heading2, H2 {
+	color: #4AA943;
+	font-size: 1.4em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin:0;
+}
+.Heading3, H3 {
+	font-size: 1.2em;
+	font-weight: normal;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#008469;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin:0;
+}
+a.Heading3, h3 a {
+	text-decoration:none;
+	padding-right: 40px;
+	background: url(/Images/h3arrowV3.gif) no-repeat right 2px;
+}
+a.Heading3:hover, h3 a:hover {
+	text-decoration:none;
+	padding-right: 40px;
+	background: url(/Images/h3arrowV3.gif) no-repeat right -36px;
+}
+.Heading4, H4 {
+	color: #4AA943;
+	font-size: 1.1em;
+	font-weight: normal;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif
+}
+.Heading5, H5 {
+	color: #5e685c;
+	font-size: 1em;
+	font-weight: bold;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif
+}
+.Heading6, H6 {
+	color: #4AA942;
+	letter-spacing:1px;
+	font-size: 1em;
+	font-weight: normal;
+	padding-top: 0.5em;
+	padding-bottom: 0.6em;
+	padding-left:15px;
+	background: url(/Images/greyBck2.gif) no-repeat 0 2px;
+	margin-top:1.5em;
+	margin-bottom:1em;
+}
+#contentOneCol .Heading6, #contentOneCol H6 {
+	background: url(/Images/greyBck.gif) no-repeat 0 2px;
+}
+#contentLeft .Heading6, #contentLeft H6 {
+	background: url(/Images/greyBck2.gif) no-repeat 0 2px;
+}
+.Normal {
+	font-family: Arial, Helvetica, sans serif;
+	color: #5e685c;
+	margin: 0;
+}
+.CriticalAlert {
+	color:#d90000;
+	font-weight:bold;
+}
+.sageGreen {
+	color:#008469;
+}
+FORM {
+	margin-top:0px;
+	margin-bottom:0px;
+}
+UL {
+	margin-top:0px;
+	margin-bottom:0px;
+}
+LI {
+	margin-bottom:1em;
+}
+OL {
+	margin-top:0px;
+	margin-bottom:0px;
+}
+BLOCKQUOTE {
+	margin-top:0px;
+	margin-bottom:0px;
+}
+A {
+	color:#414141;
+	text-decoration:underline;
+}
+A:hover {
+	color:#008469;
+	/*text-decoration: none;*/
+}
+DIV {
+	color:#5E685C;
+	font-size:small;
+}
+P {
+	color:#5E685C;
+	margin:0.5em 0px;
+	font-size:small;
+}
+TD {
+	color:#5E685C;
+	font-size:small;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family:Arial, Verdana, Helvetica, Sans-Serif;
+	background-color:#ffffff;
+}
+img {
+	border:none;
+}
+/***** form styles ***************/
+
+input.field {
+	border: solid #DFE2DE 1px;
+	padding-left: 3px;
+	height: 15px;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+fieldset 
+{
+	padding: 8px 15px 10px 15px;
+}
+fieldset label 
+{
+    display: block;
+}
+fieldset label.inline 
+{
+    display: inline;
+}
+select 
+{
+	margin: 1px 6px 6px 2px
+}
+textarea 
+{
+	font-family:  arial, helvetica, sans-serif;
+	background-color: #ffffff;
+	/*border: solid #7F9DB9 #008469 1px;*/
+	padding-left: 3px;
+	margin: 1px 6px 6px 0px
+}
+.formtitle {
+	font-weight: bold;
+	padding-bottom: 4px;
+	color: #008469;
+	position: relative;
+	top: -6px;
+}
+legend {
+	color:#008469;
+	font-weight:bold;
+}
+input:focus, select:focus, textarea:focus {
+	background:#F2F8E9;
+}
+dd {
+	padding: 0 0 15px 0;
+	margin-left:0px;
+}
+
+.language-table 
+{
+	margin-top: 15px;	
+	margin-left: auto;
+	margin-right: auto;
+	width: 350px;
+}
+.language-fieldset 
+{
+	margin-left: auto;
+	margin-right: auto;	
+	margin-bottom: 5px;
+	width: 375px;
+}
+.language-table td
+{
+	margin: 10px;
+	padding: 2px 10px 2px 10px;
+}
+.language-table td h3
+{
+	padding-bottom: 23px;
+	padding-right: 10px;
+	padding-left: 0px;
+}
+.language-p 
+{
+	margin: 20px 20px 10px 20px;
+}
+
+/* 
+	Validation 
+*/
+.field-validation-error
+{
+	line-height: 24px;
+	vertical-align: bottom !important;
+	color: #ff0000 !important;
+	padding-left: 22px !important;
+	padding-left: 22px !important;
+	background: url(/Images/val_t.png) no-repeat scroll 0px 0px !important;
+	display: none;
+}
+.input-validation-error
+{
+	border: 1px solid #ff0000;
+	background-color: #ffeeee;
+}
+.validation-summary-errors
+{
+	color: #ff0000;
+	padding-bottom: 15px;
+}
+#validationSummary 
+{
+	margin-top: 10px;
+}
+.validation-summary-errors li
+{
+	margin-top: 10px;
+	margin-bottom: -5px;
+}
+.floatLeft {
+	float: left !important;
+}
+.nomargin 
+{
+	margin: 0px;
+}
+.notopmargin 
+{
+	margin-top: 0px;
+}
+.floatRight {
+	float: right !important;
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by DAVE BANKS (SAGE UK LTD) -->
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="Guid.xsd"/>
+	<xs:simpleType name="OperationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SignOn"/>
+			<xs:enumeration value="PasswordRecovery"/>
+			<xs:enumeration value="PasswordChange"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="UserAccountActivityHistoryRecord">
+		<xs:sequence>
+			<xs:element name="DateCreated" type="xs:dateTime"/>
+			<xs:element name="Operation" type="tns:OperationType"/>
+			<xs:element name="Entries" type="tns:UserAccountActivityHistoryRecordEntry" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UserAccountActivityHistoryRecordEntry">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="SignOn" type="tns:SignOnEntryType"/>
+				<xs:element name="PasswordRecovery" type="tns:PasswordRecoveryEntryType"/>
+				<xs:element name="PasswordChange" type="tns:PasswordChangeEntryType"/>
+			</xs:choice>
+			<xs:element name="Value" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="UserAccountActivityHistoryRecord" type="tns:UserAccountActivityHistoryRecord"/>
+	<xs:element name="UserAccountActivityHistoryRecordEntry" type="tns:UserAccountActivityHistoryRecordEntry"/>
+	<xs:simpleType name="SignOnEntryType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Validated"/>
+			<xs:enumeration value="Authenticated"/>
+			<xs:enumeration value="HostIPAddress"/>
+			<xs:enumeration value="Result"/>
+			<xs:enumeration value="Reason"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PasswordRecoveryEntryType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Validated"/>
+			<xs:enumeration value="Authenticated"/>
+			<xs:enumeration value="HostIPAddress"/>
+			<xs:enumeration value="RecoveryResult"/>
+			<xs:enumeration value="RecoveryResultReason"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PasswordChangeEntryType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Validated"/>
+			<xs:enumeration value="Authenticated"/>
+			<xs:enumeration value="HostIPAddress"/>
+			<xs:enumeration value="Result"/>
+			<xs:enumeration value="ResultReason"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

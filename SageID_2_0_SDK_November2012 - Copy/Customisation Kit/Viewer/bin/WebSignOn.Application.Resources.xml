@@ -1,0 +1,1737 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebSignOn.Application.Resources</name>
+    </assembly>
+    <members>
+        <member name="T:Resources.Global">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbAccountActivated">
+            <summary>
+              Looks up a localized string similar to Your account has been successfully activated..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbChangeForgottenPassword">
+            <summary>
+              Looks up a localized string similar to This page allows you to specify your new password. Please enter your new password, confirm it in the second box, then click Continue..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbChangePassword">
+            <summary>
+              Looks up a localized string similar to This page allows you to easily change your password and security questions.&lt;br/&gt;&lt;br/&gt;Please enter your password, optional new password and optional amended security questions. when you are happy with your answers, click Continue..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbChangePassword2">
+            <summary>
+              Looks up a localized string similar to New passwords are required to be a minimum of {0} characters in length..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbChangePasswordSuccess">
+            <summary>
+              Looks up a localized string similar to Your password has been changed successfully..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbConfirmSignout">
+            <summary>
+              Looks up a localized string similar to By signing in as a different user, you will be signed out of all the web applications you are currently signed into.&lt;br /&gt;&lt;br /&gt;You are currently signed into:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbConfirmSignout2">
+            <summary>
+              Looks up a localized string similar to Are you sure you want sign out of all web applications and sign in as a different user?.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbCustomerServices">
+            <summary>
+              Looks up a localized string similar to &lt;p&gt;Please contact customer services to have your password reset.&lt;/p&gt;
+                           &lt;p&gt;Our telephone lines are open Monday to Friday, 9am to 5pm and if you send us an email, we aim to get back to you by the end of the next working day.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbForceChangePassword">
+            <summary>
+              Looks up a localized string similar to To ensure the continued security of your account, you are required to periodically update your password. Please enter a new password and confirmation to continue..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbLanguagePopup">
+            <summary>
+              Looks up a localized string similar to Sage ID is available in multiple languages, with the initial language selection based on information from your browser. If this selection is inappropriate, please select a different language from the options shown below..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbLinkExpired">
+            <summary>
+              Looks up a localized string similar to The activation link has expired. Please contact support..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbManageAuthorisation">
+            <summary>
+              Looks up a localized string similar to This page allows you to easily view and remove any authorisations, or access, you have granted other applications to your Sage resources.&lt;br /&gt;&lt;br /&gt;Once you have selected authorisations to remove, click Continue..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbNoAuthorisationsToManage">
+            <summary>
+              Looks up a localized string similar to You have not granted any other applications access to your Sage resources..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbPasswordChangedSuccessfully">
+            <summary>
+              Looks up a localized string similar to The account password has been successfully updated..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbRecovery">
+            <summary>
+              Looks up a localized string similar to Please enter the email address associated with your Sage Sign In account, along with the words shown in the image. Once you have done this, please click Continue..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbRegisterAccount">
+             <summary>
+               Looks up a localized string similar to &lt;p&gt;Creating a Sage Sign In Account helps us provide you with information that is suited to your particular needs and interests, which means it&apos;s easier for you to find what you need.&lt;/p&gt;
+            &lt;p&gt;We also use the Sage Sign In Account to help us keep your personal account information safe and secure.&lt;/p&gt;
+            &lt;p&gt;Whether you&apos;re buying or registering any of our software or services or using one of our other web services, a Sage Sign In Account helps to ensure that your account information is secure and available to you  [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbSecurityQuestion">
+            <summary>
+              Looks up a localized string similar to To confirm your identity you must answer the security questions, which you selected and provided an answer to when you created your account..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbSignIn">
+            <summary>
+              Looks up a localized string similar to Sage ID allows you to access all your Sage Services with a single username. To sign in, please enter your username and password..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbSignInIPhone">
+            <summary>
+              Looks up a localized string similar to To sign in, please enter your username and password..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.BlurbSignOnAdditional">
+            <summary>
+              Looks up a localized string similar to Sage ID allows you to access all your Sage Services with a single username. As you are already signed into one or more web applications you can sign into another without having to re-enter your username and password. To sign in, click the button below..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonAllow">
+            <summary>
+              Looks up a localized string similar to Allow.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonCancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonChangePassword">
+            <summary>
+              Looks up a localized string similar to Change Password.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonContinue">
+            <summary>
+              Looks up a localized string similar to Continue.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonDeny">
+            <summary>
+              Looks up a localized string similar to Deny.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonNo">
+            <summary>
+              Looks up a localized string similar to No.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonRegister">
+            <summary>
+              Looks up a localized string similar to Register.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonResetPassword">
+            <summary>
+              Looks up a localized string similar to Reset Password.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonSignIn">
+            <summary>
+              Looks up a localized string similar to Sign In.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonSignIntoAdditional">
+            <summary>
+              Looks up a localized string similar to Sign In.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonSubmitted">
+            <summary>
+              Looks up a localized string similar to Please wait.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ButtonYes">
+            <summary>
+              Looks up a localized string similar to Yes.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.CaptchaReload">
+            <summary>
+              Looks up a localized string similar to Get another image.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.CustomerServicesEmail">
+            <summary>
+              Looks up a localized string similar to Email: &lt;a href=&quot;mailto:support@sage.com?subject=Password Reset&quot;&gt;support@sage.com&lt;/a&gt;.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.CustomerServicesFax">
+            <summary>
+              Looks up a localized string similar to Fax: 0845 111 55 11.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.CustomerServicesTelephone">
+            <summary>
+              Looks up a localized string similar to Telephone: 0845 111 55 55.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.DemoRandomPassword">
+            <summary>
+              Looks up a localized string similar to For this demo only, the password has been set to &lt;b&gt;p@ssword1&lt;/b&gt;, but you would normally receive a new &lt;i&gt;random&lt;/i&gt; password in an email..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FileTitleImage">
+            <summary>
+              Looks up a localized string similar to sageLogo80.gif.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FileTitleImageIPhone">
+            <summary>
+              Looks up a localized string similar to sageLogo80iphone.png.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FooterCompanyDisclaimer">
+            <summary>
+              Looks up a localized string similar to The Sage Group plc, a company registered in the United Kingdom, with registered number 02231246 and with its registered office at North Park, Newcastle Upon Tyne NE13 9AA.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FooterCopyright">
+            <summary>
+              Looks up a localized string similar to &amp;copy; The Sage Group plc 2012. All Rights Reserved..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormAutoSignIn">
+            <summary>
+              Looks up a localized string similar to Automatically sign in to this application.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormCaptcha">
+            <summary>
+              Looks up a localized string similar to Please enter the two words displayed above:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormCaptchaNoScript">
+            <summary>
+              Looks up a localized string similar to Please type the two words shown into the box below:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormConfirmNewPassword">
+            <summary>
+              Looks up a localized string similar to Confirm new password:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormConfirmPassword">
+            <summary>
+              Looks up a localized string similar to Confirm password:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormCurrentPassword">
+            <summary>
+              Looks up a localized string similar to Current password:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormEmail">
+            <summary>
+              Looks up a localized string similar to Email:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormNewPassword">
+            <summary>
+              Looks up a localized string similar to New password:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormPassword">
+            <summary>
+              Looks up a localized string similar to Password:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormRecoveryAnswer1">
+            <summary>
+              Looks up a localized string similar to First question answer:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormRecoveryAnswer2">
+            <summary>
+              Looks up a localized string similar to Second question answer:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormRememberMe">
+            <summary>
+              Looks up a localized string similar to Remember me on this computer.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormRememberMeIPhone">
+            <summary>
+              Looks up a localized string similar to Remember me on this phone.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormSecurityDropdownDefault">
+            <summary>
+              Looks up a localized string similar to Please select a security question.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormSecurityQuestion1">
+            <summary>
+              Looks up a localized string similar to First security question:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormSecurityQuestion2">
+            <summary>
+              Looks up a localized string similar to Second security question:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormSecurityQuestion3">
+            <summary>
+              Looks up a localized string similar to Third security question:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormSecurityQuestionAnswer1">
+            <summary>
+              Looks up a localized string similar to First question answer:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormSecurityQuestionAnswer2">
+            <summary>
+              Looks up a localized string similar to Second question answer:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormSecurityQuestionAnswer3">
+            <summary>
+              Looks up a localized string similar to Third question answer:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormSecurityQuestionAnswerShort">
+            <summary>
+              Looks up a localized string similar to Answer:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormUseEmailForUsername">
+            <summary>
+              Looks up a localized string similar to Use email address for your username.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormUsername">
+            <summary>
+              Looks up a localized string similar to Name:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.FormYourSecurityQuestion">
+            <summary>
+              Looks up a localized string similar to Your security question:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkChangePassword">
+            <summary>
+              Looks up a localized string similar to Change Password.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkClickToRegister">
+            <summary>
+              Looks up a localized string similar to click to register.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkForgotPassword">
+            <summary>
+              Looks up a localized string similar to Forgot your password?.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkHome">
+            <summary>
+              Looks up a localized string similar to Home.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkManageAuthorisation">
+            <summary>
+              Looks up a localized string similar to Manage Authorisations.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkPrivacyPolicy">
+            <summary>
+              Looks up a localized string similar to Privacy Policy.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkRegisterAccount">
+            <summary>
+              Looks up a localized string similar to Register an account.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkRegisterAccountShort">
+            <summary>
+              Looks up a localized string similar to Register.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkReturnToWebApplication">
+            <summary>
+              Looks up a localized string similar to Please click here to return to the web application..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkSelectLanguage">
+            <summary>
+              Looks up a localized string similar to Select Language.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkSignInDifferentUser">
+            <summary>
+              Looks up a localized string similar to Sign in as a different user.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkSignInShort">
+            <summary>
+              Looks up a localized string similar to Sign In.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkSignOut">
+            <summary>
+              Looks up a localized string similar to Sign Out.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.LinkTermsConditions">
+            <summary>
+              Looks up a localized string similar to Terms &amp;amp; Conditions.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageAccountCreated">
+            <summary>
+              Looks up a localized string similar to Your account has been created successfully..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageAdditionalSecurity">
+            <summary>
+              Looks up a localized string similar to {0} is being used to sign-in to {1} and an additional security check must be performed. This check confirms the sign-in was initiated by you using {0}. If this was not the case, please click Cancel..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageAlreadySignedInto">
+            <summary>
+              Looks up a localized string similar to {0} is already signed into the following web applications:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageEffectiveValidity">
+            <summary>
+              Looks up a localized string similar to The permissions will be granted {0}..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageExistingAuthorisation">
+            <summary>
+              Looks up a localized string similar to {0} has been granted the following permissions for {1}.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageExistingAuthorisationForDevice">
+            <summary>
+              Looks up a localized string similar to {0} on device &apos;{1}&apos; has been granted the following permissions for {2}.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageGrantedPermissions">
+            <summary>
+              Looks up a localized string similar to The permissions were granted by you {0} and expire {1}.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageOAuthSignIn">
+            <summary>
+              Looks up a localized string similar to Sign in to use {0} with {1}..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessagePasswordResetSuccess">
+            <summary>
+              Looks up a localized string similar to Your password has been successfully reset..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageRequestingAccess">
+            <summary>
+              Looks up a localized string similar to is requesting permission to do the following:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageSignedOutOf">
+            <summary>
+              Looks up a localized string similar to You have successfully signed out of.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageSigningInto">
+            <summary>
+              Looks up a localized string similar to You are signing into.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.MessageStillSignedInto">
+            <summary>
+              Looks up a localized string similar to {0} is still signed into the following web applications:.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.RegisterAccountPassword">
+            <summary>
+              Looks up a localized string similar to Passwords are required to be a minimum of 8 characters in length..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanAgo">
+            <summary>
+              Looks up a localized string similar to ago.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanAMinute">
+            <summary>
+              Looks up a localized string similar to a minute.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanDays">
+            <summary>
+              Looks up a localized string similar to days.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanFor">
+            <summary>
+              Looks up a localized string similar to for.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanHour">
+            <summary>
+              Looks up a localized string similar to an hour.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanHours">
+            <summary>
+              Looks up a localized string similar to hours.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanIn">
+            <summary>
+              Looks up a localized string similar to in.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanMinutes">
+            <summary>
+              Looks up a localized string similar to minutes.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanMonths">
+            <summary>
+              Looks up a localized string similar to months.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanOneMonth">
+            <summary>
+              Looks up a localized string similar to one month.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanOneSecond">
+            <summary>
+              Looks up a localized string similar to one second.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanOneYear">
+            <summary>
+              Looks up a localized string similar to one year.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanSeconds">
+            <summary>
+              Looks up a localized string similar to seconds.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanTomorrow">
+            <summary>
+              Looks up a localized string similar to tomorrow.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanUntil">
+            <summary>
+              Looks up a localized string similar to until.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanYears">
+            <summary>
+              Looks up a localized string similar to years.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TimespanYesterday">
+            <summary>
+              Looks up a localized string similar to yesterday.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleAccountCredentials">
+            <summary>
+              Looks up a localized string similar to Account Credentials.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleAccountInformation">
+            <summary>
+              Looks up a localized string similar to Account Information.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleChangePassword">
+            <summary>
+              Looks up a localized string similar to Change Account Credentials.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleChangePasswordSuccess">
+            <summary>
+              Looks up a localized string similar to Change Password Success.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleConfirmSignout">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to sign out?.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleLanguageFlagClick">
+            <summary>
+              Looks up a localized string similar to Click on a flag to select a language.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleLanguageSelection">
+            <summary>
+              Looks up a localized string similar to Language Selection.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleManageAuthorisation">
+            <summary>
+              Looks up a localized string similar to Manage Authorisations.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleRecovery">
+            <summary>
+              Looks up a localized string similar to Forgot your password?.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleRegister">
+            <summary>
+              Looks up a localized string similar to Register a New Account.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleSecurityQuestion">
+            <summary>
+              Looks up a localized string similar to Security Questions.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleSignIn">
+            <summary>
+              Looks up a localized string similar to Sign In.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.TitleSignInConfirmation">
+            <summary>
+              Looks up a localized string similar to Sign In Confirmation.
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ToolTipAutoSignIn">
+            <summary>
+              Looks up a localized string similar to &lt;strong&gt;Automatically sign in to this application&lt;/strong&gt; allows you to sign in without having to enter your credentials in the future.&lt;br /&gt;&lt;br /&gt;It is not recommended to use this feature on a shared computer..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ToolTipCaptcha">
+            <summary>
+              Looks up a localized string similar to This step has been included to ensure your account is safe from machine based attacks. Please enter the two words which are displayed so the web application knows you are human..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ToolTipRecoveryUsername">
+            <summary>
+              Looks up a localized string similar to Your &lt;strong&gt;user name&lt;/strong&gt; is what uniquely identifies you to Sage applications. e.g. john.smith, my.company etc.&lt;br /&gt;&lt;br /&gt;Enter it here if you have forgotten your password..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ToolTipRegisterCaptcha">
+            <summary>
+              Looks up a localized string similar to This step has been included to ensure only humans and not machines can register. Please enter the two words which are displayed..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ToolTipRegisterEmail">
+            <summary>
+              Looks up a localized string similar to Your email address uniquely identifies you to Sage applications.&lt;br/&gt;&lt;br/&gt;A valid &lt;strong&gt;email address&lt;/strong&gt; should be provided so that you can activate your account and receive account emails from the system..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ToolTipRegisterPassword">
+            <summary>
+              Looks up a localized string similar to Please enter a &lt;strong&gt;password&lt;/strong&gt; to protect your account. It must be at least {0} characters long and should contain a mixture of upper, lower and special characters to help ensure maximum security..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ToolTipRegisterUsername">
+            <summary>
+              Looks up a localized string similar to The name provides a friendlier way for the system to address you.&lt;br /&gt;&lt;br /&gt;For instance, applications will use the name on welcome screens e.g. Hello John Smith..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ToolTipRememberMe">
+            <summary>
+              Looks up a localized string similar to &lt;strong&gt;Remember me on this computer&lt;/strong&gt; saves your username on your computer so that you don&apos;t have to retype it the next time you sign in.&lt;br /&gt;&lt;br /&gt;It is not recommended to use this feature on a shared computer..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ToolTipSecurityAnswer">
+            <summary>
+              Looks up a localized string similar to When your account was created you selected, and provided an answer to, a security question. This question is currently displayed above the answer box.&lt;br /&gt;&lt;br /&gt;To reset your password you need to provide the answer to this security question..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ToolTipUseEmailForUsername">
+            <summary>
+              Looks up a localized string similar to &lt;strong&gt;Use email address for your username&lt;/strong&gt; sets your username to be the same as your email address.&lt;br /&gt;&lt;br /&gt;This may make your username easier to remember..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.UnknownError">
+            <summary>
+              Looks up a localized string similar to An unknown error occurred. Please verify your entry and try again. If the problem persists, please contact support..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationCaptchaIncorrect">
+            <summary>
+              Looks up a localized string similar to The words that were entered were not correct..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationCaptchaMissing">
+            <summary>
+              Looks up a localized string similar to You must enter the two words that are displayed in the image..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationChangeNothingToDo">
+            <summary>
+              Looks up a localized string similar to The password or security questions have not been changed..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationChangePasswordFail">
+            <summary>
+              Looks up a localized string similar to The current password is incorrect or the new password is invalid..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationConfirmPasswordInvalid">
+            <summary>
+              Looks up a localized string similar to The new password and confirmation password do not match..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationConfirmPasswordMissing">
+            <summary>
+              Looks up a localized string similar to You must confirm your password..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationDuplicateEmail">
+            <summary>
+              Looks up a localized string similar to A username for that email address already exists. Please enter a different email address..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationEmailInvalid">
+            <summary>
+              Looks up a localized string similar to You must specify a valid email address..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationEmailMissing">
+            <summary>
+              Looks up a localized string similar to You must specify an email address..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationIncorrectCredentials">
+            <summary>
+              Looks up a localized string similar to The email or password provided is incorrect..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationMaxLength">
+            <summary>
+              Looks up a localized string similar to The field is too long. Use less characters..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationNewPasswordGuessable">
+            <summary>
+              Looks up a localized string similar to The new password must not be easily guessable..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationNewPasswordHistorial">
+            <summary>
+              Looks up a localized string similar to The new password you entered has been used before. Please choose another..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationNewPasswordMinLength">
+            <summary>
+              Looks up a localized string similar to The new password must be at least 8 characters long..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationNewPasswordMissing">
+            <summary>
+              Looks up a localized string similar to You must specify a new password..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationPasswordComplexity">
+            <summary>
+              Looks up a localized string similar to The password you have entered is not complex enough. It is recommended to use upper and lower case letters, numbers and special characters to ensure a strong password..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationPasswordGuessable">
+            <summary>
+              Looks up a localized string similar to The password must not be easily guessable..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationPasswordMinLength">
+            <summary>
+              Looks up a localized string similar to The password must be at least 8 characters long..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationPasswordMissing">
+            <summary>
+              Looks up a localized string similar to You must specify a password..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSecurityAnswerIncorrect">
+            <summary>
+              Looks up a localized string similar to The answer to the security question is incorrect..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSecurityAnswerMinLength">
+            <summary>
+              Looks up a localized string similar to The answer to the security question must be at least 5 characters long..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSecurityAnswerMissing">
+            <summary>
+              Looks up a localized string similar to You must provide an answer to the security question..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSecurityAnswersDifferent">
+            <summary>
+              Looks up a localized string similar to Please select three different security questions..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSecurityQuestionMinLength">
+            <summary>
+              Looks up a localized string similar to You must provide your own security question. It must be longer than 5 characters..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSecurityQuestionMissing">
+            <summary>
+              Looks up a localized string similar to You must select a security question from the list..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSummaryAuthorise">
+            <summary>
+              Looks up a localized string similar to Please correct the errors and try again..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSummaryNewPassword">
+            <summary>
+              Looks up a localized string similar to Please correct the errors and try again..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSummaryPasswordChange">
+            <summary>
+              Looks up a localized string similar to Password change was unsuccessful. Please correct the errors and try again..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSummaryRecovery">
+            <summary>
+              Looks up a localized string similar to Please correct the errors and try again..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSummaryRegisterAccount">
+            <summary>
+              Looks up a localized string similar to Account creation was unsuccessful. Please correct the errors and try again..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSummarySecurityQuestion">
+            <summary>
+              Looks up a localized string similar to Please correct the errors and try again..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationSummarySignIn">
+            <summary>
+              Looks up a localized string similar to Your sign in was unsuccessful. Please correct the errors..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationUsernameExists">
+            <summary>
+              Looks up a localized string similar to The email address is already in use. Please enter a different email address..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationUsernameInvalid">
+            <summary>
+              Looks up a localized string similar to The name must be at least 3 characters long and not contain special characters..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationUsernameMinLength">
+            <summary>
+              Looks up a localized string similar to The name must be at least 3 characters long..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationUsernameMissing">
+            <summary>
+              Looks up a localized string similar to You must specify a name..
+            </summary>
+        </member>
+        <member name="P:Resources.Global.ValidationUsernameNotFound">
+            <summary>
+              Looks up a localized string similar to The username entered is not registered with the system..
+            </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbAccountActivated">
+             <summary>
+            Your account has been successfully activated.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbChangeForgottenPassword">
+             <summary>
+            This page allows you to specify your new password. Please enter your new password, confirm it in the second box, then click Continue.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbChangePassword">
+             <summary>
+            This page allows you to easily change your password and security questions.&lt;br/&gt;&lt;br/&gt;Please enter your password, optional new password and optional amended security questions. when you are happy with your answers, click Continue.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbChangePassword2">
+             <summary>
+            New passwords are required to be a minimum of {0} characters in length.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbChangePasswordSuccess">
+             <summary>
+            Your password has been changed successfully.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbConfirmSignout">
+             <summary>
+            By signing in as a different user, you will be signed out of all the web applications you are currently signed into.&lt;br /&gt;&lt;br /&gt;You are currently signed into:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbConfirmSignout2">
+             <summary>
+            Are you sure you want sign out of all web applications and sign in as a different user?
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbCustomerServices">
+             <summary>
+            &lt;p&gt;Please contact customer services to have your password reset.&lt;/p&gt;                &lt;p&gt;Our telephone lines are open Monday to Friday, 9am to 5pm and if you send us an email, we aim to get back to you by the end of the next working day.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbForceChangePassword">
+             <summary>
+            To ensure the continued security of your account, you are required to periodically update your password. Please enter a new password and confirmation to continue.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbLanguagePopup">
+             <summary>
+            Sage ID is available in multiple languages, with the initial language selection based on information from your browser. If this selection is inappropriate, please select a different language from the options shown below.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbLinkExpired">
+             <summary>
+            The activation link has expired. Please contact support.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbManageAuthorisation">
+             <summary>
+            This page allows you to easily view and remove any authorisations, or access, you have granted other applications to your Sage resources.&lt;br /&gt;&lt;br /&gt;Once you have selected authorisations to remove, click Continue.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbPasswordChangedSuccessfully">
+             <summary>
+            The account password has been successfully updated.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbRecovery">
+             <summary>
+            Please enter the email address associated with your Sage Sign In account, along with the words shown in the image. Once you have done this, please click Continue.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbRegisterAccount">
+             <summary>
+            &lt;p&gt;Creating a Sage Sign In Account helps us provide you with information that is suited to your particular needs and interests, which means it&apos;s easier for you to find what you need.&lt;/p&gt;&lt;p&gt;We also use the Sage Sign In Account to help us keep your personal account information safe and secure.&lt;/p&gt;&lt;p&gt;Whether you&apos;re buying or registering any of our software or services or using one of our other web services, a Sage Sign In Account helps to ensure that your account information is secure and available to you in one central location.&lt;/p&gt;
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbSecurityQuestion">
+             <summary>
+            To confirm your identity you must answer the security questions, which you selected and provided an answer to when you created your account.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbSignIn">
+             <summary>
+            Sage ID allows you to access all your Sage Services with a single username. To sign in, please enter your username and password.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbSignInIPhone">
+             <summary>
+            To sign in, please enter your username and password.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbSignOnAdditional">
+             <summary>
+            Sage ID allows you to access all your Sage Services with a single username. As you are already signed into one or more web applications you can sign into another without having to re-enter your username and password. To sign in, click the button below.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonAllow">
+             <summary>
+            Allow
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonCancel">
+             <summary>
+            Cancel
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonChangePassword">
+             <summary>
+            Change Password
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonContinue">
+             <summary>
+            Continue
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonDeny">
+             <summary>
+            Deny
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonNo">
+             <summary>
+            No
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonRegister">
+             <summary>
+            Register
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonResetPassword">
+             <summary>
+            Reset Password
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonSignIn">
+             <summary>
+            Sign In
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonSignIntoAdditional">
+             <summary>
+            Sign In
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonSubmitted">
+             <summary>
+            Please wait
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ButtonYes">
+             <summary>
+            Yes
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.CaptchaReload">
+             <summary>
+            Get another image
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.CustomerServicesEmail">
+             <summary>
+            Email: &lt;a href=&quot;mailto:support@sage.com?subject=Password Reset&quot;&gt;support@sage.com&lt;/a&gt;
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.CustomerServicesFax">
+             <summary>
+            Fax: 0845 111 55 11
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.CustomerServicesTelephone">
+             <summary>
+            Telephone: 0845 111 55 55
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.DemoRandomPassword">
+             <summary>
+            For this demo only, the password has been set to &lt;b&gt;p@ssword1&lt;/b&gt;, but you would normally receive a new &lt;i&gt;random&lt;/i&gt; password in an email.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FileTitleImage">
+             <summary>
+            sageLogo80.gif
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FileTitleImageIPhone">
+             <summary>
+            sageLogo80iphone.png
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FooterCompanyDisclaimer">
+             <summary>
+            The Sage Group plc, a company registered in the United Kingdom, with registered number 02231246 and with its registered office at North Park, Newcastle Upon Tyne NE13 9AA
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FooterCopyright">
+             <summary>
+            &amp;copy; The Sage Group plc 2012. All Rights Reserved.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormAutoSignIn">
+             <summary>
+            Automatically sign in to this application
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormCaptcha">
+             <summary>
+            Please enter the two words displayed above:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormCaptchaNoScript">
+             <summary>
+            Please type the two words shown into the box below:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormConfirmNewPassword">
+             <summary>
+            Confirm new password:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormConfirmPassword">
+             <summary>
+            Confirm password:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormCurrentPassword">
+             <summary>
+            Current password:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormEmail">
+             <summary>
+            Email:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormNewPassword">
+             <summary>
+            New password:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormPassword">
+             <summary>
+            Password:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormRecoveryAnswer1">
+             <summary>
+            First question answer:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormRecoveryAnswer2">
+             <summary>
+            Second question answer:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormRememberMe">
+             <summary>
+            Remember me on this computer
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormRememberMeIPhone">
+             <summary>
+            Remember me on this phone
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormSecurityDropdownDefault">
+             <summary>
+            Please select a security question
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormSecurityQuestion1">
+             <summary>
+            First security question:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormSecurityQuestion2">
+             <summary>
+            Second security question:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormSecurityQuestion3">
+             <summary>
+            Third security question:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormSecurityQuestionAnswer1">
+             <summary>
+            First question answer:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormSecurityQuestionAnswer2">
+             <summary>
+            Second question answer:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormSecurityQuestionAnswer3">
+             <summary>
+            Third question answer:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormSecurityQuestionAnswerShort">
+             <summary>
+            Answer:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormUseEmailForUsername">
+             <summary>
+            Use email address for your username
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormUsername">
+             <summary>
+            Name:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.FormYourSecurityQuestion">
+             <summary>
+            Your security question:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkChangePassword">
+             <summary>
+            Change Password
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkClickToRegister">
+             <summary>
+            click to register
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkForgotPassword">
+             <summary>
+            Forgot your password?
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkHome">
+             <summary>
+            Home
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkManageAuthorisation">
+             <summary>
+            Manage Authorisations
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkPrivacyPolicy">
+             <summary>
+            Privacy Policy
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkRegisterAccount">
+             <summary>
+            Register an account
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkRegisterAccountShort">
+             <summary>
+            Register
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkReturnToWebApplication">
+             <summary>
+            Please click here to return to the web application.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkSelectLanguage">
+             <summary>
+            Select Language
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkSignInDifferentUser">
+             <summary>
+            Sign in as a different user
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkSignInShort">
+             <summary>
+            Sign In
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkSignOut">
+             <summary>
+            Sign Out
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.LinkTermsConditions">
+             <summary>
+            Terms &amp;amp; Conditions
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageAccountCreated">
+             <summary>
+            Your account has been created successfully.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageAdditionalSecurity">
+             <summary>
+            {0} is being used to sign-in to {1} and an additional security check must be performed. This check confirms the sign-in was initiated by you using {0}. If this was not the case, please click Cancel.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageAlreadySignedInto">
+             <summary>
+            {0} is already signed into the following web applications:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageEffectiveValidity">
+             <summary>
+            The permissions will be granted {0}.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageExistingAuthorisation">
+             <summary>
+            {0} has been granted the following permissions for {1}
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageExistingAuthorisationForDevice">
+             <summary>
+            {0} on device &apos;{1}&apos; has been granted the following permissions for {2}
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageOAuthSignIn">
+             <summary>
+            Sign in to use {0} with {1}.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessagePasswordResetSuccess">
+             <summary>
+            Your password has been successfully reset.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageRequestingAccess">
+             <summary>
+            is requesting permission to do the following:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageSignedOutOf">
+             <summary>
+            You have successfully signed out of
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageSigningInto">
+             <summary>
+            You are signing into
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageStillSignedInto">
+             <summary>
+            {0} is still signed into the following web applications:
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.RegisterAccountPassword">
+             <summary>
+            Passwords are required to be a minimum of 8 characters in length.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanAgo">
+             <summary>
+            ago
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanAMinute">
+             <summary>
+            a minute
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanDays">
+             <summary>
+            days
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanFor">
+             <summary>
+            for
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanHour">
+             <summary>
+            an hour
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanHours">
+             <summary>
+            hours
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanMinutes">
+             <summary>
+            minutes
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanMonths">
+             <summary>
+            months
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanOneMonth">
+             <summary>
+            one month
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanOneSecond">
+             <summary>
+            one second
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanOneYear">
+             <summary>
+            one year
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanSeconds">
+             <summary>
+            seconds
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanTomorrow">
+             <summary>
+            tomorrow
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanUntil">
+             <summary>
+            until
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanYears">
+             <summary>
+            years
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanYesterday">
+             <summary>
+            yesterday
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleAccountCredentials">
+             <summary>
+            Account Credentials
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleAccountInformation">
+             <summary>
+            Account Information
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleChangePassword">
+             <summary>
+            Change Account Credentials
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleChangePasswordSuccess">
+             <summary>
+            Change Password Success
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleConfirmSignout">
+             <summary>
+            Are you sure you want to sign out?
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleLanguageFlagClick">
+             <summary>
+            Click on a flag to select a language
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleLanguageSelection">
+             <summary>
+            Language Selection
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleManageAuthorisation">
+             <summary>
+            Manage Authorisations
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleRecovery">
+             <summary>
+            Forgot your password?
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleRegister">
+             <summary>
+            Register a New Account
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleSecurityQuestion">
+             <summary>
+            Security Questions
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleSignIn">
+             <summary>
+            Sign In
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TitleSignInConfirmation">
+             <summary>
+            Sign In Confirmation
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ToolTipAutoSignIn">
+             <summary>
+            &lt;strong&gt;Automatically sign in to this application&lt;/strong&gt; allows you to sign in without having to enter your credentials in the future.&lt;br /&gt;&lt;br /&gt;It is not recommended to use this feature on a shared computer.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ToolTipCaptcha">
+             <summary>
+            This step has been included to ensure your account is safe from machine based attacks. Please enter the two words which are displayed so the web application knows you are human.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ToolTipRecoveryUsername">
+             <summary>
+            Your &lt;strong&gt;user name&lt;/strong&gt; is what uniquely identifies you to Sage applications. e.g. john.smith, my.company etc.&lt;br /&gt;&lt;br /&gt;Enter it here if you have forgotten your password.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ToolTipRegisterCaptcha">
+             <summary>
+            This step has been included to ensure only humans and not machines can register. Please enter the two words which are displayed.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ToolTipRegisterEmail">
+             <summary>
+            Your email address uniquely identifies you to Sage applications.&lt;br/&gt;&lt;br/&gt;A valid &lt;strong&gt;email address&lt;/strong&gt; should be provided so that you can activate your account and receive account emails from the system.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ToolTipRegisterPassword">
+             <summary>
+            Please enter a &lt;strong&gt;password&lt;/strong&gt; to protect your account. It must be at least {0} characters long and should contain a mixture of upper, lower and special characters to help ensure maximum security.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ToolTipRegisterUsername">
+             <summary>
+            The name provides a friendlier way for the system to address you.&lt;br /&gt;&lt;br /&gt;For instance, applications will use the name on welcome screens e.g. Hello John Smith.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ToolTipRememberMe">
+             <summary>
+            &lt;strong&gt;Remember me on this computer&lt;/strong&gt; saves your username on your computer so that you don&apos;t have to retype it the next time you sign in.&lt;br /&gt;&lt;br /&gt;It is not recommended to use this feature on a shared computer.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ToolTipSecurityAnswer">
+             <summary>
+            When your account was created you selected, and provided an answer to, a security question. This question is currently displayed above the answer box.&lt;br /&gt;&lt;br /&gt;To reset your password you need to provide the answer to this security question.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ToolTipUseEmailForUsername">
+             <summary>
+            &lt;strong&gt;Use email address for your username&lt;/strong&gt; sets your username to be the same as your email address.&lt;br /&gt;&lt;br /&gt;This may make your username easier to remember.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.UnknownError">
+             <summary>
+            An unknown error occurred. Please verify your entry and try again. If the problem persists, please contact support.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationCaptchaIncorrect">
+             <summary>
+            The words that were entered were not correct.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationCaptchaMissing">
+             <summary>
+            You must enter the two words that are displayed in the image.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationChangeNothingToDo">
+             <summary>
+            The password or security questions have not been changed.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationChangePasswordFail">
+             <summary>
+            The current password is incorrect or the new password is invalid.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationConfirmPasswordInvalid">
+             <summary>
+            The new password and confirmation password do not match.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationConfirmPasswordMissing">
+             <summary>
+            You must confirm your password.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationDuplicateEmail">
+             <summary>
+            A username for that email address already exists. Please enter a different email address.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationEmailInvalid">
+             <summary>
+            You must specify a valid email address.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationEmailMissing">
+             <summary>
+            You must specify an email address.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationIncorrectCredentials">
+             <summary>
+            The email or password provided is incorrect.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationMaxLength">
+             <summary>
+            The field is too long. Use less characters.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationNewPasswordGuessable">
+             <summary>
+            The new password must not be easily guessable.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationNewPasswordHistorial">
+             <summary>
+            The new password you entered has been used before. Please choose another.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationNewPasswordMinLength">
+             <summary>
+            The new password must be at least 8 characters long.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationNewPasswordMissing">
+             <summary>
+            You must specify a new password.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationPasswordComplexity">
+             <summary>
+            The password you have entered is not complex enough. It is recommended to use upper and lower case letters, numbers and special characters to ensure a strong password.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationPasswordGuessable">
+             <summary>
+            The password must not be easily guessable.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationPasswordMinLength">
+             <summary>
+            The password must be at least 8 characters long.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationPasswordMissing">
+             <summary>
+            You must specify a password.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSecurityAnswerIncorrect">
+             <summary>
+            The answer to the security question is incorrect.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSecurityAnswerMinLength">
+             <summary>
+            The answer to the security question must be at least 5 characters long.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSecurityAnswerMissing">
+             <summary>
+            You must provide an answer to the security question.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSecurityAnswersDifferent">
+             <summary>
+            Please select three different security questions.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSecurityQuestionMinLength">
+             <summary>
+            You must provide your own security question. It must be longer than 5 characters.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSecurityQuestionMissing">
+             <summary>
+            You must select a security question from the list.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSummaryAuthorise">
+             <summary>
+            Please correct the errors and try again.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSummaryNewPassword">
+             <summary>
+            Please correct the errors and try again.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSummaryPasswordChange">
+             <summary>
+            Password change was unsuccessful. Please correct the errors and try again.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSummaryRecovery">
+             <summary>
+            Please correct the errors and try again.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSummaryRegisterAccount">
+             <summary>
+            Account creation was unsuccessful. Please correct the errors and try again.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSummarySecurityQuestion">
+             <summary>
+            Please correct the errors and try again.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationSummarySignIn">
+             <summary>
+            Your sign in was unsuccessful. Please correct the errors.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationUsernameExists">
+             <summary>
+            The email address is already in use. Please enter a different email address.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationUsernameInvalid">
+             <summary>
+            The name must be at least 3 characters long and not contain special characters.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationUsernameMinLength">
+             <summary>
+            The name must be at least 3 characters long.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationUsernameMissing">
+             <summary>
+            You must specify a name.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.ValidationUsernameNotFound">
+             <summary>
+            The username entered is not registered with the system.
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.TimespanIn">
+             <summary>
+            in
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.MessageGrantedPermissions">
+             <summary>
+            The permissions were granted by you {0} and expire {1}
+             </summary>
+        </member>
+        <member name="F:Resources.SSO.BlurbNoAuthorisationsToManage">
+             <summary>
+            You have not granted any other applications access to your Sage resources.
+             </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,34 @@
+﻿/* CSS Document IE6 overide*/
+h1 {
+	font-size: 2.0em;
+}
+#contentBorder {
+	background-image: url(/Images/_contentBackMid.gif);
+}
+#bodyContainerBare {
+	margin-top: 0px;
+	padding-top: 0px;
+	background: none !important;
+}
+#headerContainer 
+{
+	background: none !important;
+}
+#footer {
+	background-image: url(/Images/_contentBackBot.gif);
+	/* IE6 haslayout fix for footer*/
+	_height: 0;
+}
+#contentBorderTop {
+	background-image: url(/Images/_contentBackTop.gif);
+}
+div#recaptcha_widget_div .field-validation-error 
+{
+	line-height: 24px;
+	vertical-align: bottom !important;
+	color: #ff0000 !important;
+	padding-left: 0px !important;
+	background-image: none !important;
+	display: block;
+}
+

@@ -1,0 +1,5 @@
+﻿Hello {username},
+
+Your account has been created but is not yet activated. To continue, please open the following link in your web browser:
+
+{link_continue}

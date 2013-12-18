@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="XMLDigitalSignature.xsd"/>
+	<xs:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="Guid.xsd"/>
+	<xs:include schemaLocation="Principal.xsd"/>
+	<xs:element name="AuthenticationToken" type="tns:AuthenticationToken" nillable="true">
+		<xs:annotation>
+			<xs:documentation>This type represents the permission of one SageSSO principal (the "bearer") to perform actions against one or more resources for a specified period using the identity of another SageSSO princpal (the "subject").</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="AuthenticationToken">
+		<xs:annotation>
+			<xs:documentation>This type represents the permission of one SageSSO principal (the "bearer") to perform actions against one or more resources for a specified period using the identity of another SageSSO princpal (the "subject").</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TokenId" type="ms:guid">
+				<xs:annotation>
+					<xs:documentation>The unique, non-repeating ID of this AuthenticationToken.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Subject" type="tns:Subject">
+				<xs:annotation>
+					<xs:documentation>The SageSSO identity which is represented by the AuthenticationToken.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Scope" type="tns:Scope">
+				<xs:annotation>
+					<xs:documentation>The limitations on the use of this AuthenticationToken.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="ds:Signature"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Subject">
+		<xs:annotation>
+			<xs:documentation>The SageSSO identity which is represented by the AuthenticationToken.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="X509Principal" type="tns:X509Principal">
+				<xs:annotation>
+					<xs:documentation>A SageSSO X509 identity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UserPrincipal" type="tns:UserPrincipal">
+				<xs:annotation>
+					<xs:documentation>A SageSSO user identity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="Scope">
+		<xs:annotation>
+			<xs:documentation>The limitations on the use of this AuthenticationToken.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Bearer" type="tns:Bearer">
+				<xs:annotation>
+					<xs:documentation>The SageSSO identity which may present this AuthenticationToken to a recipient. This identity may not be a UserPrincipal (because the recipient has no way to independently verify the identity of the user).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Validity" type="tns:Validity">
+				<xs:annotation>
+					<xs:documentation>The period of time during which this AuthenticationToken may be presented to a recipient by the bearer.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Permissions" type="tns:ArrayOfPermission" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A collection of Permission elements which describe the set of resources and actions for which the Bearer may present this AuthenticationToken. Note that, ultimately, the  authorization of a request made by a requester to a recipient is the responsibility of the the recipient.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Roles" type="tns:ArrayOfRole" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A collection of Role elements which describe the set of roles to which the Subject and Bearer belong. Note that, ultimately, the authorization of a request made by a requester to a recipient is the responsibility of the the recipient.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Bearer">
+		<xs:annotation>
+			<xs:documentation>The SageSSO identity which may present this AuthenticationToken to a recipient. This identity may not be a UserPrincipal (because the recipient has no way to independently verify the identity of the user).</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="X509Principal" type="tns:X509Principal">
+				<xs:annotation>
+					<xs:documentation>A SageSSO X509 identity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+      <xs:element name="SecretKeyPrincipal" type="tns:SecretkeyPrincipal">
+        <xs:annotation>
+          <xs:documentation>A SageSSO Secret key identity.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="Validity">
+		<xs:annotation>
+			<xs:documentation>The period of time during which this AuthenticationToken may be presented to a recipient by the bearer.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="NotValidBefore" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>The instant before which this AuthenticationToken is invalid.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NotValidAfter" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>The instant after which this AuthenticationToken is invalid.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SingleUse" type="xs:boolean" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>If this element is present, this AuthenticationToken is considered to be valid for a single use only during the period expressed by NotValidBefore and NotValidAfter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ArrayOfPermission">
+		<xs:annotation>
+			<xs:documentation>A collection of Permission elements which describe the set of resources and actions for which the Bearer may present this AuthenticationToken. Note that, ultimately, the authorization of a request made by a requester to a recipient is the responsibility of the the recipient.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Permission" type="tns:Permission" nillable="true" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>An element which specifies a resource and an action which may be performed on that resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Permission">
+		<xs:annotation>
+			<xs:documentation>Elements of this type represent a resource and an action which may be performed on that resource.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Resource" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>An application-dependent resource identifier.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Action" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>An application-dependent action identifier. The special identifier "*" represents "all actions".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ArrayOfRole">
+		<xs:annotation>
+			<xs:documentation>A collection of Role elements which describe the set of roles to which the Subject and Bearer belong. Note that, ultimately, the authorization of a request made by a requester to a recipient is the responsibility of the the recipient.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Role" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>An application-dependent role identifier.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Role">
+		<xs:annotation>
+			<xs:documentation>Elements of this type represent a SageSSO role.</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+</xs:schema>

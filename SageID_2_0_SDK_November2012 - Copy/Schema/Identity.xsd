@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by DAVE BANKS (SAGE UK LTD) -->
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="Guid.xsd"/>
+	<xs:include schemaLocation="Principal.xsd"/>
+	<xs:include schemaLocation="Updateable.xsd"/>
+	<xs:include schemaLocation="UserAccountPolicy.xsd"/>
+	<xs:complexType name="Identity">
+		<xs:annotation>
+			<xs:documentation>The base schema type for all identities in SageSSO.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tns:Updateable">
+				<xs:sequence>
+					<xs:element name="Id" type="ms:guid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The unique ID for this identity. The ID will not change for the lifetime of the identity.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DateCreated" type="xs:dateTime" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The date that the identity was first created in the SageSSO system.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="IsSystemIdentity" type="xs:boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A flag which indicates whether or not the identity is a fixed, system identity. Some operations by external clients on system identites are restricted.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="UserIdentity" mixed="false">
+		<xs:annotation>
+			<xs:documentation>A SageSSO user identity.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:Identity">
+				<xs:sequence>
+					<xs:element name="PassportInfo" type="tns:PassportInfo" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>If the user was migrated from Sage Passport, this element contains information which correlates the user's SageSSO identity with their Sage Passport identity. This is intended to support applications which are migrated from Sage Passport. Other applications may not require this information.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="EmailAddress" nillable="false" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The user's email address. EmailAddress is guaranteed to be unique at any one time but may change for a given user over time or may be re-used by another user. Applications should not correlate private identity information against EmailAddress.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="64"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Name" type="xs:string" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The user's name. This is used for display purposes. It may change over time.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Password" type="xs:string" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The user's password. This is stored securely in SageSSO using one-way encryption. Applications can supply the password when creating an identity, but may never expect to receive the password when retrieving the identity later.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="AccountPolicyName" type="xs:string" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The name of the user account policy associated with this identity.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="X509Identity">
+		<xs:annotation>
+			<xs:documentation>A SageSSO X509 identity.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tns:Identity">
+				<xs:sequence>
+					<xs:element name="Thumbprint" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The thumbprint of the X509 certificate which currently represents the X509 identity. This may change over time for a given X509 principal. Applications should not correlate private identity information against this item.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Subject" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The subject distinguished name on the X509 certificate which currently represents the X509 identity. This may change over time for a given X509 principal. Applications should not correlate private identity information against this item.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Issuer" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The issue distinguished name on the X509 certificate which currently represents the X509 identity. This may change over time for a given X509 principal. Applications should not correltate private identity information against this item.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="UserIdentity" type="tns:UserIdentity"/>
+	<xs:element name="X509Identity" type="tns:X509Identity"/>
+	<xs:complexType name="SecretKeyIdentity">
+		<xs:annotation>
+			<xs:documentation>A SageSSO secret key identity.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tns:Identity">
+				<xs:sequence>
+					<xs:element name="Key" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The key string.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minLength value="16"/>
+								<xs:maxLength value="256"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Name" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The name of the identity.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="SecretKeyIdentity" type="tns:SecretKeyIdentity"/>
+</xs:schema>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="WebApplication.Azure.ccproj" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <WebRole name="WebApplication" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+
+    <Certificates>
+      <!-- ifdef ${_xml_preprocess} -->
+      <!--<clientCertificate findValue="${webApp_cloudCertificateName}" storeLocation="LocalMachine" storeName="My" />-->
+      <!--<clientCertificate findValue="${webApp_SSORootCertificateFindValue}" storeLocation="LocalMachine" storeName="Root" />-->
+      <!-- else -->
+      <Certificate name="Sage SSO Identity Root (Pre-Production)" storeLocation="LocalMachine" storeName="My"/>
+      <Certificate name="UK Central Web Application C (Pre-production)" storeLocation="LocalMachine" storeName="My"/>
+      <!-- endif -->
+    </Certificates>
+
+  </WebRole>
+</ServiceDefinition>

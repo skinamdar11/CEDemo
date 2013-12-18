@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by DAVE BANKS (SAGE UK LTD) -->
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:complexType name="Updateable">
+		<xs:annotation>
+			<xs:documentation>A base type from which schema types are derived which represents items which are updateable using optimistic concurrency semantics.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="VersionStamp" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The version stamp for the updateable schema type. The version stamp increments each time the item is updated. When creating a new item, this element should be omitted. When updating an item, this element should contain the value received from SageSSO when the item to be updated was read. If, on update, the value passed does not match the value stored for the item, an optimistic concurrency fault will be returned.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

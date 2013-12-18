@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChangePasswordResult.aspx.cs" Inherits="WebApplication.ChangePasswordResult" %>

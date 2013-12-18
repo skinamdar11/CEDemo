@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by DAVE BANKS (SAGE UK LTD) -->
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="Guid.xsd"/>
+	<xs:complexType name="Principal">
+		<xs:annotation>
+			<xs:documentation>The base schema type for all principals in SageSSO.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Id" type="ms:guid">
+				<xs:annotation>
+					<xs:documentation>The unique ID of the principal. This ID is guaranteed to be static for the lifetime of the principal and is never re-used. Applications should correlate private identity information against Id (rather than, for example, Username, which may change). For an X509 identity, this is encoded as the serial number of the corresponding X509 certificate.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UserPrincipal" mixed="false">
+		<xs:annotation>
+			<xs:documentation>A SageSSO user principal.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:Principal">
+				<xs:sequence>
+					<xs:element name="EmailAddress" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The user's email address at the time the AuthenticationToken was issued. EmailAddress is guaranteed to be unique at any one time but may change for a given user over time or may be re-used by another user. Applications should not correlate private identity information against EmailAddress.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="PassportInfo" type="tns:PassportInfo" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>If the user was migrated from Sage Passport, this element contains information which correlates the user's SageSSO identity with their Sage Passport identity. This is intended to support applications which are migrated from Sage Passport. Other applications may not require this information.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PassportInfo">
+		<xs:annotation>
+			<xs:documentation>If the user was migrated from Sage Passport, elements of this type contain information which correlates the user's SageSSO identity with their Sage Passport identity. This is intended to support applications which are migrated from Sage Passport. Other applications may not require this information.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="OperationId" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>The Sage Passport operation ID.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MemberId" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>The Sage Passport member ID.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="X509Principal" mixed="false">
+		<xs:annotation>
+			<xs:documentation>A SageSSO X509 principal.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:Principal">
+				<xs:sequence>
+					<xs:element name="Thumbprint" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The thumbprint of the X509 certificate which currently represents the X509 identity. This may change over time for a given X509 principal. Applications should not correlate private identity information against this item.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Subject" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The subject distinguished name on the X509 certificate which currently represents the X509 identity. This may change over time for a given X509 principal. Applications should not correlate private identity information against this item.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Issuer" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The issue distinguished name on the X509 certificate which currently represents the X509 identity. This may change over time for a given X509 principal. Applications should not correltate private identity information against this item.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+  <xs:complexType name="SecretkeyPrincipal" mixed="false">
+    <xs:annotation>
+      <xs:documentation>A SageSSO SecretKey principal.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Principal">
+        <xs:sequence>
+          <xs:element name="Subject" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>The subject distinguished name on for the secret key principal.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

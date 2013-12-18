@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="WebApplication.Azure.ccproj" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*">
+  <Role name="WebApplication">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+      <Certificates>
+        <!-- ifdef ${_xml_preprocess} -->
+        <!--<Certificate name="${webApp_cloudCertificateName}" thumbprint="${webApp_cloudCertificateThumbprint}" thumbprintAlgorithm="sha1" />-->
+        <!--<Certificate name="${webApp_cloudCertificateName}" thumbprint="${webApp_SSORootCertificateThumbprint}" thumbprintAlgorithm="sha1" />-->
+        <!-- else -->
+        <Certificate name="Sage SSO Identity Root (Pre-Production)" thumbprint="C3294FE0E12991374CA96DA73D7F578A42D78C24" thumbprintAlgorithm="sha1" />
+        
+        <Certificate name="UK Central Web Application C (Pre-production)" thumbprint="510DED9EAF5DAEBB0FB5CEA6454C544B4729CB48" thumbprintAlgorithm="sha1" />
+        <!-- endif -->
+    </Certificates>
+    
+  </Role>
+  
+</ServiceConfiguration>

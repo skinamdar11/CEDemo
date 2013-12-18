@@ -1,0 +1,1209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://sso.sage.com" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://sso.sage.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://sso.sage.com/Imports">
+      <xsd:import namespace="http://sso.sage.com" schemaLocation="sso.sage.com.xsd" />
+      <xsd:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="microsoft.com.wsdl.types.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IIdentityManagementServiceSoap_GetUserIdentity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdentity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_GetUserIdentity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_CreateUserIdentity_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserIdentity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_CreateUserIdentity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_UpdateUserIdentity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserIdentity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_UpdateUserIdentity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_DeleteUserIdentity_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserIdentity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_DeleteUserIdentity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_ListUserIdentities_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserIdentities" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_ListUserIdentities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserIdentitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_GetX509Identity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetX509Identity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_GetX509Identity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetX509IdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_CreateX509Identity_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateX509Identity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_CreateX509Identity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateX509IdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_UpdateX509Identity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateX509Identity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_UpdateX509Identity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateX509IdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_DeleteX509Identity_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteX509Identity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_DeleteX509Identity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteX509IdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_GetSecretKeyIdentity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecretKeyIdentity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_GetSecretKeyIdentity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecretKeyIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_CreateSecretKeyIdentity_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSecretKeyIdentity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_CreateSecretKeyIdentity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSecretKeyIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_UpdateSecretKeyIdentity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSecretKeyIdentity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_UpdateSecretKeyIdentity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSecretKeyIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_DeleteSecretKeyIdentity_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSecretKeyIdentity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_DeleteSecretKeyIdentity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSecretKeyIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_ListSecretKeyIdentities_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListSecretKeyIdentities" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityManagementServiceSoap_ListSecretKeyIdentities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListSecretKeyIdentitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRemoteScriptingServiceSoap_ExecuteScript_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteScript" />
+  </wsdl:message>
+  <wsdl:message name="IRemoteScriptingServiceSoap_ExecuteScript_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteScriptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRemoteScriptingServiceSoap_GetScriptResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScriptResult" />
+  </wsdl:message>
+  <wsdl:message name="IRemoteScriptingServiceSoap_GetScriptResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScriptResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSummary" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetEffectiveState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEffectiveState" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetEffectiveState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEffectiveStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_ApplyHardLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyHardLock" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_ApplyHardLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyHardLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_RemoveLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLock" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_RemoveLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_ApplySignOnBlock_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplySignOnBlock" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_ApplySignOnBlock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplySignOnBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_RemoveSignOnBlock_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSignOnBlock" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_RemoveSignOnBlock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSignOnBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetSignOnBlockStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignOnBlockStatus" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetSignOnBlockStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignOnBlockStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_MarkActivated_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarkActivated" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_MarkActivated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarkActivatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetActivationStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivationStatus" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetActivationStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivationStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetGracePeriodStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGracePeriodStatus" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetGracePeriodStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGracePeriodStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_ResendActivationEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResendActivationEmail" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_ResendActivationEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResendActivationEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_RegisterForWebApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterForWebApplication" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_RegisterForWebApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterForWebApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_UnregisterFromWebApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnregisterFromWebApplication" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_UnregisterFromWebApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnregisterFromWebApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetRegisteredWebApplications_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisteredWebApplications" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetRegisteredWebApplications_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisteredWebApplicationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_ApplyWebApplicationAutoSignOn_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyWebApplicationAutoSignOn" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_ApplyWebApplicationAutoSignOn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyWebApplicationAutoSignOnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_RemoveWebApplicationAutoSignOn_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveWebApplicationAutoSignOn" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_RemoveWebApplicationAutoSignOn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveWebApplicationAutoSignOnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetWebApplicationAutoSignOnStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebApplicationAutoSignOnStatus" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_GetWebApplicationAutoSignOnStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebApplicationAutoSignOnStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_ListRegisteredUserIdentities_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListRegisteredUserIdentities" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_ListRegisteredUserIdentities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListRegisteredUserIdentitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_UpdatePasswordWithActivation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordWithActivation" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_UpdatePasswordWithActivation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordWithActivationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_MarkForcePasswordChangeOnNextSignOn_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarkForcePasswordChangeOnNextSignOn" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccountManagementServiceSoap_MarkForcePasswordChangeOnNextSignOn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarkForcePasswordChangeOnNextSignOnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartSignOnAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartSignOnAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartSignOnAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartSignOnAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndSignOnAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EndSignOnAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndSignOnAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EndSignOnAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartNewUserRegistrationAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartNewUserRegistrationAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartNewUserRegistrationAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartNewUserRegistrationAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndNewUserRegistrationAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EndNewUserRegistrationAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndNewUserRegistrationAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EndNewUserRegistrationAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartExistingUserRegistrationAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartExistingUserRegistrationAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartExistingUserRegistrationAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartExistingUserRegistrationAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndExistingUserRegistrationAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EndExistingUserRegistrationAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndExistingUserRegistrationAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EndExistingUserRegistrationAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartPasswordRecoveryAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartPasswordRecoveryAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartPasswordRecoveryAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartPasswordRecoveryAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndPasswordRecoveryAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EndPasswordRecoveryAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndPasswordRecoveryAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EndPasswordRecoveryAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartPasswordChangeAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartPasswordChangeAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartPasswordChangeAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartPasswordChangeAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndPasswordChangeAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EndPasswordChangeAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndPasswordChangeAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EndPasswordChangeAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartManageAuthorisationAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartManageAuthorisationAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_StartManageAuthorisationAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartManageAuthorisationAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndManageAuthorisationAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EndManageAuthorisationAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_EndManageAuthorisationAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EndManageAuthorisationAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_SessionRemoveParticipant_InputMessage">
+    <wsdl:part name="parameters" element="tns:SessionRemoveParticipant" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_SessionRemoveParticipant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SessionRemoveParticipantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_SessionSignOff_InputMessage">
+    <wsdl:part name="parameters" element="tns:SessionSignOff" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_SessionSignOff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SessionSignOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_SessionExtend_InputMessage">
+    <wsdl:part name="parameters" element="tns:SessionExtend" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_SessionExtend_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SessionExtendResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_ActivationLinkContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivationLinkContext" />
+  </wsdl:message>
+  <wsdl:message name="IWebSSOServiceSoap_ActivationLinkContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivationLinkContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceSoap_GetAuthorizationSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorizationSummary" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceSoap_GetAuthorizationSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorizationSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceSoap_GetAuthorizedClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedClients" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceSoap_GetAuthorizedClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceSoap_GetAuthorizationsForClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorizationsForClient" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceSoap_GetAuthorizationsForClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorizationsForClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceSoap_RevokeAuthorization_InputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeAuthorization" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceSoap_RevokeAuthorization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeAuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceWeb_WebGetAuthorizationSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGetAuthorizationSummary" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceWeb_WebGetAuthorizationSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGetAuthorizationSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceWeb_WebGetAuthorizedClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGetAuthorizedClients" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceWeb_WebGetAuthorizedClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGetAuthorizedClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceWeb_WebGetAuthorizationsForClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGetAuthorizationsForClient" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceWeb_WebGetAuthorizationsForClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGetAuthorizationsForClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceWeb_WebRevokeAuthorization_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRevokeAuthorization" />
+  </wsdl:message>
+  <wsdl:message name="IUserAuthorizationManagementServiceWeb_WebRevokeAuthorization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRevokeAuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="false" name="IIdentityManagementServiceSoap">
+    <wsdl:operation name="GetUserIdentity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/GetUserIdentity" message="tns:IIdentityManagementServiceSoap_GetUserIdentity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/GetUserIdentityResponse" message="tns:IIdentityManagementServiceSoap_GetUserIdentity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserIdentity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/CreateUserIdentity" message="tns:IIdentityManagementServiceSoap_CreateUserIdentity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/CreateUserIdentityResponse" message="tns:IIdentityManagementServiceSoap_CreateUserIdentity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserIdentity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/UpdateUserIdentity" message="tns:IIdentityManagementServiceSoap_UpdateUserIdentity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/UpdateUserIdentityResponse" message="tns:IIdentityManagementServiceSoap_UpdateUserIdentity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserIdentity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/DeleteUserIdentity" message="tns:IIdentityManagementServiceSoap_DeleteUserIdentity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/DeleteUserIdentityResponse" message="tns:IIdentityManagementServiceSoap_DeleteUserIdentity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUserIdentities">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/ListUserIdentities" message="tns:IIdentityManagementServiceSoap_ListUserIdentities_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/ListUserIdentitiesResponse" message="tns:IIdentityManagementServiceSoap_ListUserIdentities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetX509Identity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/GetX509Identity" message="tns:IIdentityManagementServiceSoap_GetX509Identity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/GetX509IdentityResponse" message="tns:IIdentityManagementServiceSoap_GetX509Identity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateX509Identity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/CreateX509Identity" message="tns:IIdentityManagementServiceSoap_CreateX509Identity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/CreateX509IdentityResponse" message="tns:IIdentityManagementServiceSoap_CreateX509Identity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateX509Identity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/UpdateX509Identity" message="tns:IIdentityManagementServiceSoap_UpdateX509Identity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/UpdateX509IdentityResponse" message="tns:IIdentityManagementServiceSoap_UpdateX509Identity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteX509Identity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/DeleteX509Identity" message="tns:IIdentityManagementServiceSoap_DeleteX509Identity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/DeleteX509IdentityResponse" message="tns:IIdentityManagementServiceSoap_DeleteX509Identity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecretKeyIdentity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/GetSecretKeyIdentity" message="tns:IIdentityManagementServiceSoap_GetSecretKeyIdentity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/GetSecretKeyIdentityResponse" message="tns:IIdentityManagementServiceSoap_GetSecretKeyIdentity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSecretKeyIdentity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/CreateSecretKeyIdentity" message="tns:IIdentityManagementServiceSoap_CreateSecretKeyIdentity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/CreateSecretKeyIdentityResponse" message="tns:IIdentityManagementServiceSoap_CreateSecretKeyIdentity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecretKeyIdentity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/UpdateSecretKeyIdentity" message="tns:IIdentityManagementServiceSoap_UpdateSecretKeyIdentity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/UpdateSecretKeyIdentityResponse" message="tns:IIdentityManagementServiceSoap_UpdateSecretKeyIdentity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSecretKeyIdentity">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/DeleteSecretKeyIdentity" message="tns:IIdentityManagementServiceSoap_DeleteSecretKeyIdentity_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/DeleteSecretKeyIdentityResponse" message="tns:IIdentityManagementServiceSoap_DeleteSecretKeyIdentity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListSecretKeyIdentities">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/ListSecretKeyIdentities" message="tns:IIdentityManagementServiceSoap_ListSecretKeyIdentities_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IIdentityManagementServiceSoap/ListSecretKeyIdentitiesResponse" message="tns:IIdentityManagementServiceSoap_ListSecretKeyIdentities_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType msc:usingSession="false" name="IRemoteScriptingServiceSoap">
+    <wsdl:operation name="ExecuteScript">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IRemoteScriptingServiceSoap/ExecuteScript" message="tns:IRemoteScriptingServiceSoap_ExecuteScript_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IRemoteScriptingServiceSoap/ExecuteScriptResponse" message="tns:IRemoteScriptingServiceSoap_ExecuteScript_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScriptResult">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IRemoteScriptingServiceSoap/GetScriptResult" message="tns:IRemoteScriptingServiceSoap_GetScriptResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IRemoteScriptingServiceSoap/GetScriptResultResponse" message="tns:IRemoteScriptingServiceSoap_GetScriptResult_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IUserAccountManagementServiceSoap">
+    <wsdl:operation name="GetSummary">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetSummary" message="tns:IUserAccountManagementServiceSoap_GetSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetSummaryResponse" message="tns:IUserAccountManagementServiceSoap_GetSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEffectiveState">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetEffectiveState" message="tns:IUserAccountManagementServiceSoap_GetEffectiveState_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetEffectiveStateResponse" message="tns:IUserAccountManagementServiceSoap_GetEffectiveState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyHardLock">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/ApplyHardLock" message="tns:IUserAccountManagementServiceSoap_ApplyHardLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/ApplyHardLockResponse" message="tns:IUserAccountManagementServiceSoap_ApplyHardLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLock">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/RemoveLock" message="tns:IUserAccountManagementServiceSoap_RemoveLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/RemoveLockResponse" message="tns:IUserAccountManagementServiceSoap_RemoveLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplySignOnBlock">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/ApplySignOnBlock" message="tns:IUserAccountManagementServiceSoap_ApplySignOnBlock_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/ApplySignOnBlockResponse" message="tns:IUserAccountManagementServiceSoap_ApplySignOnBlock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSignOnBlock">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/RemoveSignOnBlock" message="tns:IUserAccountManagementServiceSoap_RemoveSignOnBlock_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/RemoveSignOnBlockResponse" message="tns:IUserAccountManagementServiceSoap_RemoveSignOnBlock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSignOnBlockStatus">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetSignOnBlockStatus" message="tns:IUserAccountManagementServiceSoap_GetSignOnBlockStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetSignOnBlockStatusResponse" message="tns:IUserAccountManagementServiceSoap_GetSignOnBlockStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkActivated">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/MarkActivated" message="tns:IUserAccountManagementServiceSoap_MarkActivated_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/MarkActivatedResponse" message="tns:IUserAccountManagementServiceSoap_MarkActivated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivationStatus">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetActivationStatus" message="tns:IUserAccountManagementServiceSoap_GetActivationStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetActivationStatusResponse" message="tns:IUserAccountManagementServiceSoap_GetActivationStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGracePeriodStatus">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetGracePeriodStatus" message="tns:IUserAccountManagementServiceSoap_GetGracePeriodStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetGracePeriodStatusResponse" message="tns:IUserAccountManagementServiceSoap_GetGracePeriodStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResendActivationEmail">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/ResendActivationEmail" message="tns:IUserAccountManagementServiceSoap_ResendActivationEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/ResendActivationEmailResponse" message="tns:IUserAccountManagementServiceSoap_ResendActivationEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterForWebApplication">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/RegisterForWebApplication" message="tns:IUserAccountManagementServiceSoap_RegisterForWebApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/RegisterForWebApplicationResponse" message="tns:IUserAccountManagementServiceSoap_RegisterForWebApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnregisterFromWebApplication">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/UnregisterFromWebApplication" message="tns:IUserAccountManagementServiceSoap_UnregisterFromWebApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/UnregisterFromWebApplicationResponse" message="tns:IUserAccountManagementServiceSoap_UnregisterFromWebApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisteredWebApplications">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetRegisteredWebApplications" message="tns:IUserAccountManagementServiceSoap_GetRegisteredWebApplications_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetRegisteredWebApplicationsResponse" message="tns:IUserAccountManagementServiceSoap_GetRegisteredWebApplications_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyWebApplicationAutoSignOn">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/ApplyWebApplicationAutoSignOn" message="tns:IUserAccountManagementServiceSoap_ApplyWebApplicationAutoSignOn_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/ApplyWebApplicationAutoSignOnResponse" message="tns:IUserAccountManagementServiceSoap_ApplyWebApplicationAutoSignOn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveWebApplicationAutoSignOn">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/RemoveWebApplicationAutoSignOn" message="tns:IUserAccountManagementServiceSoap_RemoveWebApplicationAutoSignOn_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/RemoveWebApplicationAutoSignOnResponse" message="tns:IUserAccountManagementServiceSoap_RemoveWebApplicationAutoSignOn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebApplicationAutoSignOnStatus">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetWebApplicationAutoSignOnStatus" message="tns:IUserAccountManagementServiceSoap_GetWebApplicationAutoSignOnStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/GetWebApplicationAutoSignOnStatusResponse" message="tns:IUserAccountManagementServiceSoap_GetWebApplicationAutoSignOnStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListRegisteredUserIdentities">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/ListRegisteredUserIdentities" message="tns:IUserAccountManagementServiceSoap_ListRegisteredUserIdentities_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/ListRegisteredUserIdentitiesResponse" message="tns:IUserAccountManagementServiceSoap_ListRegisteredUserIdentities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePasswordWithActivation">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/UpdatePasswordWithActivation" message="tns:IUserAccountManagementServiceSoap_UpdatePasswordWithActivation_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/UpdatePasswordWithActivationResponse" message="tns:IUserAccountManagementServiceSoap_UpdatePasswordWithActivation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkForcePasswordChangeOnNextSignOn">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/MarkForcePasswordChangeOnNextSignOn" message="tns:IUserAccountManagementServiceSoap_MarkForcePasswordChangeOnNextSignOn_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAccountManagementServiceSoap/MarkForcePasswordChangeOnNextSignOnResponse" message="tns:IUserAccountManagementServiceSoap_MarkForcePasswordChangeOnNextSignOn_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType msc:usingSession="false" name="IWebSSOServiceSoap">
+    <wsdl:operation name="StartSignOnAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartSignOnAttempt" message="tns:IWebSSOServiceSoap_StartSignOnAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartSignOnAttemptResponse" message="tns:IWebSSOServiceSoap_StartSignOnAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EndSignOnAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndSignOnAttempt" message="tns:IWebSSOServiceSoap_EndSignOnAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndSignOnAttemptResponse" message="tns:IWebSSOServiceSoap_EndSignOnAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartNewUserRegistrationAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartNewUserRegistrationAttempt" message="tns:IWebSSOServiceSoap_StartNewUserRegistrationAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartNewUserRegistrationAttemptResponse" message="tns:IWebSSOServiceSoap_StartNewUserRegistrationAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EndNewUserRegistrationAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndNewUserRegistrationAttempt" message="tns:IWebSSOServiceSoap_EndNewUserRegistrationAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndNewUserRegistrationAttemptResponse" message="tns:IWebSSOServiceSoap_EndNewUserRegistrationAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartExistingUserRegistrationAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartExistingUserRegistrationAttempt" message="tns:IWebSSOServiceSoap_StartExistingUserRegistrationAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartExistingUserRegistrationAttemptResponse" message="tns:IWebSSOServiceSoap_StartExistingUserRegistrationAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EndExistingUserRegistrationAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndExistingUserRegistrationAttempt" message="tns:IWebSSOServiceSoap_EndExistingUserRegistrationAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndExistingUserRegistrationAttemptResponse" message="tns:IWebSSOServiceSoap_EndExistingUserRegistrationAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartPasswordRecoveryAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartPasswordRecoveryAttempt" message="tns:IWebSSOServiceSoap_StartPasswordRecoveryAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartPasswordRecoveryAttemptResponse" message="tns:IWebSSOServiceSoap_StartPasswordRecoveryAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EndPasswordRecoveryAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndPasswordRecoveryAttempt" message="tns:IWebSSOServiceSoap_EndPasswordRecoveryAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndPasswordRecoveryAttemptResponse" message="tns:IWebSSOServiceSoap_EndPasswordRecoveryAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartPasswordChangeAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartPasswordChangeAttempt" message="tns:IWebSSOServiceSoap_StartPasswordChangeAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartPasswordChangeAttemptResponse" message="tns:IWebSSOServiceSoap_StartPasswordChangeAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EndPasswordChangeAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndPasswordChangeAttempt" message="tns:IWebSSOServiceSoap_EndPasswordChangeAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndPasswordChangeAttemptResponse" message="tns:IWebSSOServiceSoap_EndPasswordChangeAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartManageAuthorisationAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartManageAuthorisationAttempt" message="tns:IWebSSOServiceSoap_StartManageAuthorisationAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/StartManageAuthorisationAttemptResponse" message="tns:IWebSSOServiceSoap_StartManageAuthorisationAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EndManageAuthorisationAttempt">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndManageAuthorisationAttempt" message="tns:IWebSSOServiceSoap_EndManageAuthorisationAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/EndManageAuthorisationAttemptResponse" message="tns:IWebSSOServiceSoap_EndManageAuthorisationAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SessionRemoveParticipant">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/SessionRemoveParticipant" message="tns:IWebSSOServiceSoap_SessionRemoveParticipant_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/SessionRemoveParticipantResponse" message="tns:IWebSSOServiceSoap_SessionRemoveParticipant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SessionSignOff">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/SessionSignOff" message="tns:IWebSSOServiceSoap_SessionSignOff_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/SessionSignOffResponse" message="tns:IWebSSOServiceSoap_SessionSignOff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SessionExtend">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/SessionExtend" message="tns:IWebSSOServiceSoap_SessionExtend_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/SessionExtendResponse" message="tns:IWebSSOServiceSoap_SessionExtend_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivationLinkContext">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/ActivationLinkContext" message="tns:IWebSSOServiceSoap_ActivationLinkContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IWebSSOServiceSoap/ActivationLinkContextResponse" message="tns:IWebSSOServiceSoap_ActivationLinkContext_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IUserAuthorizationManagementServiceSoap">
+    <wsdl:operation name="GetAuthorizationSummary">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/GetAuthorizationSummary" message="tns:IUserAuthorizationManagementServiceSoap_GetAuthorizationSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/GetAuthorizationSummaryResponse" message="tns:IUserAuthorizationManagementServiceSoap_GetAuthorizationSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedClients">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/GetAuthorizedClients" message="tns:IUserAuthorizationManagementServiceSoap_GetAuthorizedClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/GetAuthorizedClientsResponse" message="tns:IUserAuthorizationManagementServiceSoap_GetAuthorizedClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizationsForClient">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/GetAuthorizationsForClient" message="tns:IUserAuthorizationManagementServiceSoap_GetAuthorizationsForClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/GetAuthorizationsForClientResponse" message="tns:IUserAuthorizationManagementServiceSoap_GetAuthorizationsForClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RevokeAuthorization">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/RevokeAuthorization" message="tns:IUserAuthorizationManagementServiceSoap_RevokeAuthorization_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/RevokeAuthorizationResponse" message="tns:IUserAuthorizationManagementServiceSoap_RevokeAuthorization_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IUserAuthorizationManagementServiceWeb">
+    <wsdl:operation name="WebGetAuthorizationSummary">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebGetAuthorizationSummary" message="tns:IUserAuthorizationManagementServiceWeb_WebGetAuthorizationSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebGetAuthorizationSummaryResponse" message="tns:IUserAuthorizationManagementServiceWeb_WebGetAuthorizationSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGetAuthorizedClients">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebGetAuthorizedClients" message="tns:IUserAuthorizationManagementServiceWeb_WebGetAuthorizedClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebGetAuthorizedClientsResponse" message="tns:IUserAuthorizationManagementServiceWeb_WebGetAuthorizedClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGetAuthorizationsForClient">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebGetAuthorizationsForClient" message="tns:IUserAuthorizationManagementServiceWeb_WebGetAuthorizationsForClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebGetAuthorizationsForClientResponse" message="tns:IUserAuthorizationManagementServiceWeb_WebGetAuthorizationsForClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRevokeAuthorization">
+      <wsdl:input wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebRevokeAuthorization" message="tns:IUserAuthorizationManagementServiceWeb_WebRevokeAuthorization_InputMessage" />
+      <wsdl:output wsaw:Action="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebRevokeAuthorizationResponse" message="tns:IUserAuthorizationManagementServiceWeb_WebRevokeAuthorization_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DefaultBinding_IIdentityManagementServiceSoap" type="tns:IIdentityManagementServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserIdentity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/GetUserIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserIdentity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/CreateUserIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserIdentity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/UpdateUserIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserIdentity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/DeleteUserIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUserIdentities">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/ListUserIdentities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetX509Identity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/GetX509Identity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateX509Identity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/CreateX509Identity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateX509Identity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/UpdateX509Identity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteX509Identity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/DeleteX509Identity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSecretKeyIdentity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/GetSecretKeyIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSecretKeyIdentity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/CreateSecretKeyIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecretKeyIdentity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/UpdateSecretKeyIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSecretKeyIdentity">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/DeleteSecretKeyIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListSecretKeyIdentities">
+      <soap:operation soapAction="http://sso.sage.com/IIdentityManagementServiceSoap/ListSecretKeyIdentities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DefaultBinding_IRemoteScriptingServiceSoap" type="tns:IRemoteScriptingServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecuteScript">
+      <soap:operation soapAction="http://sso.sage.com/IRemoteScriptingServiceSoap/ExecuteScript" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScriptResult">
+      <soap:operation soapAction="http://sso.sage.com/IRemoteScriptingServiceSoap/GetScriptResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DefaultBinding_IUserAccountManagementServiceSoap" type="tns:IUserAccountManagementServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSummary">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/GetSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEffectiveState">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/GetEffectiveState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyHardLock">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/ApplyHardLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLock">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/RemoveLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplySignOnBlock">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/ApplySignOnBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSignOnBlock">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/RemoveSignOnBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignOnBlockStatus">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/GetSignOnBlockStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkActivated">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/MarkActivated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivationStatus">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/GetActivationStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGracePeriodStatus">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/GetGracePeriodStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResendActivationEmail">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/ResendActivationEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterForWebApplication">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/RegisterForWebApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnregisterFromWebApplication">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/UnregisterFromWebApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisteredWebApplications">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/GetRegisteredWebApplications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyWebApplicationAutoSignOn">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/ApplyWebApplicationAutoSignOn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveWebApplicationAutoSignOn">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/RemoveWebApplicationAutoSignOn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebApplicationAutoSignOnStatus">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/GetWebApplicationAutoSignOnStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListRegisteredUserIdentities">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/ListRegisteredUserIdentities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePasswordWithActivation">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/UpdatePasswordWithActivation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkForcePasswordChangeOnNextSignOn">
+      <soap:operation soapAction="http://sso.sage.com/IUserAccountManagementServiceSoap/MarkForcePasswordChangeOnNextSignOn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DefaultBinding_IWebSSOServiceSoap" type="tns:IWebSSOServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StartSignOnAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/StartSignOnAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndSignOnAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/EndSignOnAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartNewUserRegistrationAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/StartNewUserRegistrationAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndNewUserRegistrationAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/EndNewUserRegistrationAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartExistingUserRegistrationAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/StartExistingUserRegistrationAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndExistingUserRegistrationAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/EndExistingUserRegistrationAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartPasswordRecoveryAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/StartPasswordRecoveryAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndPasswordRecoveryAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/EndPasswordRecoveryAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartPasswordChangeAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/StartPasswordChangeAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndPasswordChangeAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/EndPasswordChangeAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartManageAuthorisationAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/StartManageAuthorisationAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndManageAuthorisationAttempt">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/EndManageAuthorisationAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SessionRemoveParticipant">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/SessionRemoveParticipant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SessionSignOff">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/SessionSignOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SessionExtend">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/SessionExtend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivationLinkContext">
+      <soap:operation soapAction="http://sso.sage.com/IWebSSOServiceSoap/ActivationLinkContext" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DefaultBinding_IUserAuthorizationManagementServiceSoap" type="tns:IUserAuthorizationManagementServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAuthorizationSummary">
+      <soap:operation soapAction="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/GetAuthorizationSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedClients">
+      <soap:operation soapAction="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/GetAuthorizedClients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizationsForClient">
+      <soap:operation soapAction="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/GetAuthorizationsForClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RevokeAuthorization">
+      <soap:operation soapAction="http://sso.sage.com/IUserAuthorizationManagementServiceSoap/RevokeAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DefaultBinding_IUserAuthorizationManagementServiceWeb" type="tns:IUserAuthorizationManagementServiceWeb">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebGetAuthorizationSummary">
+      <soap:operation soapAction="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebGetAuthorizationSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGetAuthorizedClients">
+      <soap:operation soapAction="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebGetAuthorizedClients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGetAuthorizationsForClient">
+      <soap:operation soapAction="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebGetAuthorizationsForClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRevokeAuthorization">
+      <soap:operation soapAction="http://sso.sage.com/IUserAuthorizationManagementServiceWeb/WebRevokeAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IdentityManagementService">
+    <wsdl:port name="DefaultBinding_IIdentityManagementServiceSoap" binding="tns:DefaultBinding_IIdentityManagementServiceSoap">
+      <soap:address location="https://services.sso.services.sage.com/sso/IdentityManagementService" />
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="RemoteScriptingService">
+    <wsdl:port name="DefaultBinding_IRemoteScriptingServiceSoap" binding="tns:DefaultBinding_IRemoteScriptingServiceSoap">
+      <soap:address location="https://services.sso.services.sage.com/sso/RemoteScriptingService" />
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="UserAccountManagementService">
+    <wsdl:port name="DefaultBinding_IUserAccountManagementServiceSoap" binding="tns:DefaultBinding_IUserAccountManagementServiceSoap">
+      <soap:address location="https://services.sso.services.sage.com/sso/UserAccountManagementService" />
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="WebSSOService">
+    <wsdl:port name="DefaultBinding_IWebSSOServiceSoap" binding="tns:DefaultBinding_IWebSSOServiceSoap">
+      <soap:address location="https://services.sso.services.sage.com/sso/WebSSOService" />
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="UserAuthorizationManagementService">
+    <wsdl:port name="DefaultBinding_IUserAuthorizationManagementServiceSoap" binding="tns:DefaultBinding_IUserAuthorizationManagementServiceSoap">
+      <soap:address location="https://services.sso.services.sage.com/sso/UserAuthorizationManagementService" />
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="UserAuthorizationManagementServiceWeb">
+    <wsdl:port name="DefaultBinding_IUserAuthorizationManagementServiceWeb" binding="tns:DefaultBinding_IUserAuthorizationManagementServiceWeb">
+      <soap:address location="https://services.sso.services.sage.com/sso/UserAuthorizationManagementServiceWeb" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

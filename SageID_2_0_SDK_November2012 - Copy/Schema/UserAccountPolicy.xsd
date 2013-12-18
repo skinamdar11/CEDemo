@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by DAVE BANKS (SAGE UK LTD) -->
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="Guid.xsd"/>
+	<xs:include schemaLocation="Updateable.xsd"/>
+	<xs:complexType name="HardLockPolicy">
+		<xs:annotation>
+			<xs:documentation>Describes the policy requirements for hard (permanent) account lock out.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FailedAuthenticationThreshold" type="xs:integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SoftLockPolicy">
+		<xs:annotation>
+			<xs:documentation>Describes the policy requirements for soft (temporary) account lock out.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="LockLevel" type="tns:SoftLockPolicyLockLevel"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="HardLockPolicy" type="tns:HardLockPolicy"/>
+	<xs:element name="SoftLockPolicy" type="tns:SoftLockPolicy"/>
+	<xs:complexType name="UserAccountPolicy">
+		<xs:annotation>
+			<xs:documentation>Describes a signup password management policy for a SageSSO user identity.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tns:Updateable">
+				<xs:sequence>
+					<xs:element name="Id" type="ms:guid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The unique ID for this policy. The ID will not change for the lifetime of the policy.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DateCreated" type="xs:dateTime" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The date that the policy was first created in the SageSSO system.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Name" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The descriptive name for the policy.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Rank" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The policy rank.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FailedPasswordRecoveryThreshold" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The number of failed password recovery attempts allowed before the user account is hard-locked.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CaptchaThreshold" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The number of failed sign-on attempts that can occur before a verification captcha is displayed.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="HardLockPolicy" type="tns:HardLockPolicy" minOccurs="0"/>
+					<xs:element name="SoftLockPolicy" type="tns:SoftLockPolicy" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="UserAccountPolicy" type="tns:UserAccountPolicy"/>
+	<xs:complexType name="SoftLockPolicyLockLevel">
+		<xs:annotation>
+			<xs:documentation>Defines a soft lock policy lock level.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="LockLevel" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The numeric lock level, starting from 1.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FailedAuthenticationThreshold" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The number of failed authentication attempts allowed for this soft lock level, before the next level should be applied.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LockDuration" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The duration that the lock is applied for.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SoftLockPolicyLockLevel" type="tns:SoftLockPolicyLockLevel"/>
+</xs:schema>

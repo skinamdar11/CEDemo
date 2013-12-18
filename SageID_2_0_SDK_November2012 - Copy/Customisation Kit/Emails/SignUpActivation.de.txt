@@ -1,0 +1,5 @@
+﻿Hallo {username},
+
+Ihr Konto wurde erstellt, aber noch nicht aktiviert ist. Um fortzufahren, öffnen Sie bitte den folgenden Link in Ihren Web-Browser:
+
+{link_continue}

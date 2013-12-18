@@ -1,0 +1,1960 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://sso.sage.com" elementFormDefault="qualified" targetNamespace="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://microsoft.com/wsdl/types/" />
+  <xs:element name="GetUserIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetUserIdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetUserIdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q1="http://microsoft.com/wsdl/types/" type="q1:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetUserIdentityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetUserIdentityResult" type="tns:GetUserIdentityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetUserIdentityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="UserIdentity" type="tns:UserIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UserIdentity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Identity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="PassportInfo" nillable="true" type="tns:PassportInfo" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AccountPolicyName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Identity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Updateable">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Id" xmlns:q2="http://microsoft.com/wsdl/types/" type="q2:guid" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DateCreated" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="IsSystemIdentity" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Updateable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="VersionStamp" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UserAccountPolicy">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Updateable">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Id" xmlns:q3="http://microsoft.com/wsdl/types/" type="q3:guid" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DateCreated" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Rank" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FailedPasswordRecoveryThreshold" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CaptchaThreshold" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HardLockPolicy" type="tns:HardLockPolicy" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SoftLockPolicy" type="tns:SoftLockPolicy" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="HardLockPolicy">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="FailedAuthenticationThreshold" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SoftLockPolicy">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LockLevel" type="tns:SoftLockPolicyLockLevel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SoftLockPolicyLockLevel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="LockLevel" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FailedAuthenticationThreshold" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LockDuration" type="xs:duration" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Profile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Updateable">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q4="http://microsoft.com/wsdl/types/" type="q4:guid" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DateCreated" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Items" type="tns:ProfileItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ProfileItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuthorizationClient">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Updateable">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Id" xmlns:q5="http://microsoft.com/wsdl/types/" type="q5:guid" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DateCreated" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" xmlns:q6="http://microsoft.com/wsdl/types/" type="q6:guid" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ClientId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DefaultRedirectUri" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RedirectUris" type="tns:ArrayOfString" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DefaultDisplayName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LocalisedDisplayNames" type="tns:ArrayOfCultureSpecificValue" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AllowSkipAuthorization" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RedirectUri" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCultureSpecificValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DisplayName" type="tns:CultureSpecificValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CultureSpecificValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WebAuthorizationClient">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AuthorizationClient">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="AuthenticationType" type="tns:AuthenticationType" />
+          <xs:choice minOccurs="1" maxOccurs="1">
+            <xs:element minOccurs="0" maxOccurs="1" name="SecretKeyAuthentication" type="tns:SecretKeyAuthenticationInfo" />
+            <xs:element minOccurs="0" maxOccurs="1" name="X509Authentication" type="tns:X509AuthenticationInfo" />
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="AuthenticationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="X509" />
+      <xs:enumeration value="SecretKey" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SecretKeyAuthenticationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Key" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="X509AuthenticationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Subject" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Issuer" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DesktopAuthorizationClient">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AuthorizationClient" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MobileAuthorizationClient">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AuthorizationClient">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="AuthenticationType" type="tns:AuthenticationType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WebApplication">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Updateable">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Id" xmlns:q7="http://microsoft.com/wsdl/types/" type="q7:guid" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AutomaticSignOnMode" type="tns:AutomaticSignOnMode" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayNames" type="tns:ArrayOfCultureSpecificValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="X509Principal" type="tns:X509Principal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NotificationUri" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SupportNonActivatedSignOn" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TemplateName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CaptchaTheme" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MaxAnonymousSignOnAttemptsBeforeCaptcha" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MaxAnonymousSignOnAttemptsBeforeFailure" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AccountPolicyName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SendsOwnActivationEmails" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ActivationLinkTimeout" type="xs:duration" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ActivationLinkLinger" type="xs:duration" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ActivationExitUri" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AllowTransparentRegistration" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="EmailConfiguration" type="tns:EmailConfiguration" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NotificationSubscriptionId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Moniker" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OpCo" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BusinessUnit" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="AutomaticSignOnMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AlwaysAutomaticSignOn" />
+      <xs:enumeration value="OptionalAutomaticSignOn" />
+      <xs:enumeration value="NoAutomaticSignOn" />
+      <xs:enumeration value="AlwaysRequestCredentials" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="X509Principal">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Principal">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Thumbprint" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Subject" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Issuer" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Principal">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q8="http://microsoft.com/wsdl/types/" type="q8:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UserPrincipal">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Principal">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PassportInfo" nillable="true" type="tns:PassportInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PassportInfo">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="OperationId" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="MemberId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SecretkeyPrincipal">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Principal">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Subject" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EmailConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="EmailType" type="tns:EmailType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Configuration" type="tns:WebApplicationEmailConfiguration" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="EmailType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Activation" />
+      <xs:enumeration value="PasswordRecovery" />
+      <xs:enumeration value="PasswordChangedNotification" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WebApplicationEmailConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TemplateName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FromAddress" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FromName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SubjectNames" type="tns:CultureSpecificValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="X509Identity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Identity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Thumbprint" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Subject" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Issuer" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SecretKeyIdentity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Identity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Key" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateUserIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:CreateUserIdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CreateUserIdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="UserIdentity" type="tns:UserIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateUserIdentityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CreateUserIdentityResult" type="tns:CreateUserIdentityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CreateUserIdentityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q9="http://microsoft.com/wsdl/types/" type="q9:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="VersionStamp" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateUserIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:UpdateUserIdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UpdateUserIdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="UserIdentity" type="tns:UserIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateUserIdentityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="UpdateUserIdentityResult" type="tns:UpdateUserIdentityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UpdateUserIdentityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="VersionStamp" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteUserIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:DeleteUserIdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DeleteUserIdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q10="http://microsoft.com/wsdl/types/" type="q10:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteUserIdentityResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="ListUserIdentities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:ListUserIdentitiesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ListUserIdentitiesRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="FilterField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Offset" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Count" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Order" type="tns:ListSortOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ListSortOrder">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Undefined" />
+      <xs:enumeration value="Ascending" />
+      <xs:enumeration value="Descending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ListUserIdentitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ListUserIdentitiesResult" type="tns:ListUserIdentitiesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ListUserIdentitiesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="UserIdentities" type="tns:ArrayOfUserIdentity" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfUserIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserIdentity" type="tns:UserIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetX509Identity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetX509IdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetX509IdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q11="http://microsoft.com/wsdl/types/" type="q11:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetX509IdentityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetX509IdentityResult" type="tns:GetX509IdentityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetX509IdentityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="X509Identity" type="tns:X509Identity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateX509Identity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:CreateX509IdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CreateX509IdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="X509Identity" type="tns:X509Identity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateX509IdentityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CreateX509IdentityResult" type="tns:CreateX509IdentityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CreateX509IdentityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q12="http://microsoft.com/wsdl/types/" type="q12:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="VersionStamp" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateX509Identity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:UpdateX509IdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UpdateX509IdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="X509Identity" type="tns:X509Identity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateX509IdentityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="UpdateX509IdentityResult" type="tns:UpdateX509IdentityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UpdateX509IdentityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="VersionStamp" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteX509Identity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:DeleteX509IdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DeleteX509IdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q13="http://microsoft.com/wsdl/types/" type="q13:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteX509IdentityResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetSecretKeyIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetSecretKeyIdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetSecretKeyIdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q14="http://microsoft.com/wsdl/types/" type="q14:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetSecretKeyIdentityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetSecretKeyIdentityResult" type="tns:GetSecretKeyIdentityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetSecretKeyIdentityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SecretKeyIdentity" type="tns:SecretKeyIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateSecretKeyIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:CreateSecretKeyIdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CreateSecretKeyIdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SecretKeyIdentity" type="tns:SecretKeyIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateSecretKeyIdentityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CreateSecretKeyIdentityResult" type="tns:CreateSecretKeyIdentityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CreateSecretKeyIdentityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q15="http://microsoft.com/wsdl/types/" type="q15:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="VersionStamp" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateSecretKeyIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:UpdateSecretKeyIdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UpdateSecretKeyIdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SecretKeyIdentity" type="tns:SecretKeyIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateSecretKeyIdentityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="UpdateSecretKeyIdentityResult" type="tns:UpdateSecretKeyIdentityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UpdateSecretKeyIdentityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="VersionStamp" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteSecretKeyIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:DeleteSecretKeyIdentityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DeleteSecretKeyIdentityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q16="http://microsoft.com/wsdl/types/" type="q16:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteSecretKeyIdentityResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="ListSecretKeyIdentities">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="ListSecretKeyIdentitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ListSecretKeyIdentitiesResult" type="tns:ListSecretKeyIdentitiesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ListSecretKeyIdentitiesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SecretKeyIdentities" type="tns:ArrayOfSecretKeyIdentity" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSecretKeyIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SecretKeyIdentity" type="tns:SecretKeyIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExecuteScript">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:ExecuteScriptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ExecuteScriptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Arguments" type="tns:ArrayOfScriptArgument" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ScriptName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfScriptArgument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Argument" nillable="true" type="tns:ScriptArgument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScriptArgument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExecuteScriptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ExecuteScriptResult" type="tns:ExecuteScriptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ExecuteScriptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="InstanceId" xmlns:q17="http://microsoft.com/wsdl/types/" type="q17:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetScriptResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetScriptResultRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetScriptResultRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="InstanceId" xmlns:q18="http://microsoft.com/wsdl/types/" type="q18:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetScriptResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetScriptResultResult" type="tns:GetScriptResultResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetScriptResultResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Status" type="tns:ScriptExecutionState" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ResultData" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ScriptExecutionState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Running" />
+      <xs:enumeration value="Complete" />
+      <xs:enumeration value="Error" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GetSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetSummaryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetSummaryRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q19="http://microsoft.com/wsdl/types/" type="q19:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetSummaryResult" type="tns:GetSummaryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetSummaryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="WebApplications" type="tns:ArrayOfWebApplicationRegistrationSummary" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EffectiveState" type="tns:EffectiveState" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SoftLockExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="GracePeriodExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ActivationStatus" type="tns:ActivationStatus" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DateActivated" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExpiryDueDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfWebApplicationRegistrationSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebApplicationRegistration" type="tns:WebApplicationRegistrationSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WebApplicationRegistrationSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="DisplayNames" type="tns:ArrayOfCultureSpecificValue" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" xmlns:q20="http://microsoft.com/wsdl/types/" type="q20:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Enabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="EffectiveState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active" />
+      <xs:enumeration value="SoftLocked" />
+      <xs:enumeration value="HardLocked" />
+      <xs:enumeration value="Expired" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ActivationStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotActivated" />
+      <xs:enumeration value="Activated" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GetEffectiveState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetEffectiveStateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetEffectiveStateRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q21="http://microsoft.com/wsdl/types/" type="q21:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetEffectiveStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetEffectiveStateResult" type="tns:GetEffectiveStateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetEffectiveStateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="EffectiveState" type="tns:EffectiveState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplyHardLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:ApplyHardLockRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ApplyHardLockRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q22="http://microsoft.com/wsdl/types/" type="q22:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplyHardLockResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="RemoveLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:RemoveLockRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RemoveLockRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q23="http://microsoft.com/wsdl/types/" type="q23:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoveLockResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="ApplySignOnBlock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:ApplySignOnBlockRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ApplySignOnBlockRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q24="http://microsoft.com/wsdl/types/" type="q24:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" nillable="true" xmlns:q25="http://microsoft.com/wsdl/types/" type="q25:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplySignOnBlockResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="RemoveSignOnBlock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:RemoveSignOnBlockRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RemoveSignOnBlockRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q26="http://microsoft.com/wsdl/types/" type="q26:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" nillable="true" xmlns:q27="http://microsoft.com/wsdl/types/" type="q27:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoveSignOnBlockResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetSignOnBlockStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetSignOnBlockStatusRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetSignOnBlockStatusRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q28="http://microsoft.com/wsdl/types/" type="q28:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" nillable="true" xmlns:q29="http://microsoft.com/wsdl/types/" type="q29:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetSignOnBlockStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetSignOnBlockStatusResult" type="tns:GetSignOnBlockStatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetSignOnBlockStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Blocked" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MarkActivated">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:MarkActivatedRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MarkActivatedRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q30="http://microsoft.com/wsdl/types/" type="q30:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MarkActivatedResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetActivationStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetActivationStatusRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetActivationStatusRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q31="http://microsoft.com/wsdl/types/" type="q31:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetActivationStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetActivationStatusResult" type="tns:GetActivationStatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetActivationStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ActivationStatus" type="tns:ActivationStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetGracePeriodStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetGracePeriodStatusRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetGracePeriodStatusRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q32="http://microsoft.com/wsdl/types/" type="q32:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" nillable="true" xmlns:q33="http://microsoft.com/wsdl/types/" type="q33:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetGracePeriodStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetGracePeriodStatusResult" type="tns:GetGracePeriodStatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetGracePeriodStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="WithinGracePeriod" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="GracePeriodExpiryDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResendActivationEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:ResendActivationEmailRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ResendActivationEmailRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q34="http://microsoft.com/wsdl/types/" type="q34:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResendActivationEmailResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="RegisterForWebApplication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:RegisterForWebApplicationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RegisterForWebApplicationRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q35="http://microsoft.com/wsdl/types/" type="q35:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" xmlns:q36="http://microsoft.com/wsdl/types/" type="q36:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="AutoSignOn" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Blocked" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterForWebApplicationResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="UnregisterFromWebApplication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:UnregisterFromWebApplicationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UnregisterFromWebApplicationRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q37="http://microsoft.com/wsdl/types/" type="q37:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" nillable="true" xmlns:q38="http://microsoft.com/wsdl/types/" type="q38:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnregisterFromWebApplicationResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetRegisteredWebApplications">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetRegisteredWebApplicationsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetRegisteredWebApplicationsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q39="http://microsoft.com/wsdl/types/" type="q39:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegisteredWebApplicationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetRegisteredWebApplicationsResult" type="tns:GetRegisteredWebApplicationsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetRegisteredWebApplicationsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="WebApplications" type="tns:ArrayOfWebApplicationInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfWebApplicationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebApplication" type="tns:WebApplicationInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WebApplicationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="DisplayNames" type="tns:ArrayOfCultureSpecificValue" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" xmlns:q40="http://microsoft.com/wsdl/types/" type="q40:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="X509IdentityId" xmlns:q41="http://microsoft.com/wsdl/types/" type="q41:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplyWebApplicationAutoSignOn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:ApplyWebApplicationAutoSignOnRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ApplyWebApplicationAutoSignOnRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q42="http://microsoft.com/wsdl/types/" type="q42:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" nillable="true" xmlns:q43="http://microsoft.com/wsdl/types/" type="q43:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplyWebApplicationAutoSignOnResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="RemoveWebApplicationAutoSignOn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:RemoveWebApplicationAutoSignOnRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RemoveWebApplicationAutoSignOnRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q44="http://microsoft.com/wsdl/types/" type="q44:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" nillable="true" xmlns:q45="http://microsoft.com/wsdl/types/" type="q45:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemoveWebApplicationAutoSignOnResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetWebApplicationAutoSignOnStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetWebApplicationAutoSignOnStatusRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetWebApplicationAutoSignOnStatusRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q46="http://microsoft.com/wsdl/types/" type="q46:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" nillable="true" xmlns:q47="http://microsoft.com/wsdl/types/" type="q47:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetWebApplicationAutoSignOnStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetWebApplicationAutoSignOnStatusResult" type="tns:GetWebApplicationAutoSignOnStatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetWebApplicationAutoSignOnStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="AutoSignOn" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListRegisteredUserIdentities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:ListRegisteredUserIdentitiesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ListRegisteredUserIdentitiesRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="WebApplicationIds" type="tns:ArrayOfGuid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="FilterField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Offset" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Count" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Order" type="tns:ListSortOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfGuid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebApplicationId" xmlns:q48="http://microsoft.com/wsdl/types/" type="q48:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListRegisteredUserIdentitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ListRegisteredUserIdentitiesResult" type="tns:ListRegisteredUserIdentitiesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ListRegisteredUserIdentitiesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="UserIdentities" type="tns:ArrayOfUserIdentity" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdatePasswordWithActivation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:UpdatePasswordWithActivationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UpdatePasswordWithActivationRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="UserIdentityId" xmlns:q49="http://microsoft.com/wsdl/types/" type="q49:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" xmlns:q50="http://microsoft.com/wsdl/types/" type="q50:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TemplateName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ForcePasswordChangeOnNextSignOn" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdatePasswordWithActivationResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="MarkForcePasswordChangeOnNextSignOn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:MarkForcePasswordChangeOnNextSignOnRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MarkForcePasswordChangeOnNextSignOnRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q51="http://microsoft.com/wsdl/types/" type="q51:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MarkForcePasswordChangeOnNextSignOnResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="StartSignOnAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:StartSignOnAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StartSignOnAttemptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SuccessUri" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FailureUri" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CancelAllowed" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TemplateName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CaptchaTheme" type="tns:CaptchaTheme" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SessionLengthMinutes" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmailTemplateName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CaptchaTheme">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Red" />
+      <xs:enumeration value="White" />
+      <xs:enumeration value="BlackGlass" />
+      <xs:enumeration value="Clean" />
+      <xs:enumeration value="Custom" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StartSignOnAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="StartSignOnAttemptResult" type="tns:StartSignOnAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StartSignOnAttemptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="SignOnAttemptId" xmlns:q52="http://microsoft.com/wsdl/types/" type="q52:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RedirectUri" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndSignOnAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:EndSignOnAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EndSignOnAttemptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ResultId" xmlns:q53="http://microsoft.com/wsdl/types/" type="q53:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndSignOnAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="EndSignOnAttemptResult" type="tns:EndSignOnAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EndSignOnAttemptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="SignOnAttemptId" xmlns:q54="http://microsoft.com/wsdl/types/" type="q54:guid" />
+      <xs:choice minOccurs="1" maxOccurs="1">
+        <xs:element minOccurs="0" maxOccurs="1" name="SuccessResult" type="tns:SuccessResult" />
+        <xs:element minOccurs="0" maxOccurs="1" name="FailedResult" type="tns:FailedResult" />
+      </xs:choice>
+      <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SuccessResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="UserAuthenticationToken" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SessionId" xmlns:q55="http://microsoft.com/wsdl/types/" type="q55:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SessionExpiry" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DisplayName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q56="http://microsoft.com/wsdl/types/" type="q56:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FailedResult">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Reason" type="tns:FailureReason" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ActivationLinkUri" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="IdentityId" xmlns:q57="http://microsoft.com/wsdl/types/" type="q57:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DisplayName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="FailureReason">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ProtocolViolation" />
+      <xs:enumeration value="UnknownAccount" />
+      <xs:enumeration value="AccountNotActivated" />
+      <xs:enumeration value="AccountSoftLocked" />
+      <xs:enumeration value="AccountHardLocked" />
+      <xs:enumeration value="AccountExpired" />
+      <xs:enumeration value="AccountNotRegistered" />
+      <xs:enumeration value="SessionExpired" />
+      <xs:enumeration value="SignOnAttemptNotFound" />
+      <xs:enumeration value="SignOnCancelled" />
+      <xs:enumeration value="AccountPasswordReset" />
+      <xs:enumeration value="ValidationFailed" />
+      <xs:enumeration value="AccountBlocked" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StartNewUserRegistrationAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:StartNewUserRegistrationAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StartNewUserRegistrationAttemptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SuccessUri" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FailureUri" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CancelAllowed" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TemplateName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CaptchaTheme" type="tns:CaptchaTheme" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmailTemplateName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SessionLengthMinutes" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DisplayName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SignOnAfterSuccess" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ActivateAfterSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StartNewUserRegistrationAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="StartNewUserRegistrationAttemptResult" type="tns:StartRegistrationAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StartRegistrationAttemptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="RegistrationAttemptId" xmlns:q58="http://microsoft.com/wsdl/types/" type="q58:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RedirectUri" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndNewUserRegistrationAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:EndRegistrationAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EndRegistrationAttemptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ResultId" xmlns:q59="http://microsoft.com/wsdl/types/" type="q59:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndNewUserRegistrationAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="EndNewUserRegistrationAttemptResult" type="tns:EndRegistrationAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EndRegistrationAttemptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="RegistrationAttemptId" xmlns:q60="http://microsoft.com/wsdl/types/" type="q60:guid" />
+      <xs:choice minOccurs="1" maxOccurs="1">
+        <xs:element minOccurs="0" maxOccurs="1" name="RegistrationSuccessResult" type="tns:RegistrationSuccessResult" />
+        <xs:element minOccurs="0" maxOccurs="1" name="RegistrationFailedResult" type="tns:RegistrationFailedResult" />
+      </xs:choice>
+      <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrationSuccessResult">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q61="http://microsoft.com/wsdl/types/" type="q61:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="UserSignedOn" type="xs:boolean" />
+      <xs:choice minOccurs="1" maxOccurs="1">
+        <xs:element minOccurs="0" maxOccurs="1" name="SuccessResult" type="tns:SuccessResult" />
+        <xs:element minOccurs="0" maxOccurs="1" name="FailedResult" type="tns:FailedResult" />
+      </xs:choice>
+      <xs:element minOccurs="0" maxOccurs="1" name="ActivationLinkUri" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrationFailedResult">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Reason" type="tns:RegistrationFailureReason" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="RegistrationFailureReason">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ProtocolViolation" />
+      <xs:enumeration value="RegistrationCancelled" />
+      <xs:enumeration value="SessionExpired" />
+      <xs:enumeration value="SignOnFailed" />
+      <xs:enumeration value="RegistrationAttemptNotFound" />
+      <xs:enumeration value="AccountAlreadyRegistered" />
+      <xs:enumeration value="UnexpectedUserAccount" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StartExistingUserRegistrationAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:StartExistingUserRegistrationAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StartExistingUserRegistrationAttemptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SuccessUri" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FailureUri" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CancelAllowed" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TemplateName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CaptchaTheme" type="tns:CaptchaTheme" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmailTemplateName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SessionLengthMinutes" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ExpectedUserIdentity" xmlns:q62="http://microsoft.com/wsdl/types/" type="q62:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StartExistingUserRegistrationAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="StartExistingUserRegistrationAttemptResult" type="tns:StartRegistrationAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EndExistingUserRegistrationAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:EndRegistrationAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EndExistingUserRegistrationAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="EndExistingUserRegistrationAttemptResult" type="tns:EndRegistrationAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartPasswordRecoveryAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:StartPasswordRecoveryAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StartPasswordRecoveryAttemptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SuccessUri" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FailureUri" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CancelAllowed" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TemplateName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CaptchaTheme" type="tns:CaptchaTheme" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmailTemplateName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StartPasswordRecoveryAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="StartPasswordRecoveryAttemptResult" type="tns:StartPasswordRecoveryAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StartPasswordRecoveryAttemptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="PasswordRecoveryAttemptId" xmlns:q63="http://microsoft.com/wsdl/types/" type="q63:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RedirectUri" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndPasswordRecoveryAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:EndPasswordRecoveryAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EndPasswordRecoveryAttemptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ResultId" xmlns:q64="http://microsoft.com/wsdl/types/" type="q64:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndPasswordRecoveryAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="EndPasswordRecoveryAttemptResult" type="tns:EndPasswordRecoveryAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EndPasswordRecoveryAttemptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="PasswordRecoveryAttemptId" xmlns:q65="http://microsoft.com/wsdl/types/" type="q65:guid" />
+      <xs:choice minOccurs="1" maxOccurs="1">
+        <xs:element minOccurs="0" maxOccurs="1" name="PasswordRecoverySuccessResult" type="tns:PasswordRecoverySuccessResult" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PasswordRecoveryFailedResult" type="tns:PasswordRecoveryFailedResult" />
+      </xs:choice>
+      <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PasswordRecoverySuccessResult">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="UserIdentityId" xmlns:q66="http://microsoft.com/wsdl/types/" type="q66:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ActivationLinkUri" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PasswordRecoveryFailedResult">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Reason" type="tns:PasswordRecoveryFailureReason" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PasswordRecoveryFailureReason">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ProtocolViolation" />
+      <xs:enumeration value="PasswordRecoveryCancelled" />
+      <xs:enumeration value="AccountHardLocked" />
+      <xs:enumeration value="ValidationFailed" />
+      <xs:enumeration value="SessionExpired" />
+      <xs:enumeration value="UserSignedIn" />
+      <xs:enumeration value="AccountExpired" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StartPasswordChangeAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:StartPasswordChangeAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StartPasswordChangeAttemptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SuccessUri" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FailureUri" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CancelAllowed" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TemplateName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CaptchaTheme" type="tns:CaptchaTheme" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmailTemplateName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StartPasswordChangeAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="StartPasswordChangeAttemptResult" type="tns:StartPasswordChangeAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StartPasswordChangeAttemptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="PasswordChangeAttemptId" xmlns:q67="http://microsoft.com/wsdl/types/" type="q67:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RedirectUri" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndPasswordChangeAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:EndPasswordChangeAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EndPasswordChangeAttemptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ResultId" xmlns:q68="http://microsoft.com/wsdl/types/" type="q68:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndPasswordChangeAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="EndPasswordChangeAttemptResult" type="tns:EndPasswordChangeAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EndPasswordChangeAttemptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="PasswordChangeAttemptId" xmlns:q69="http://microsoft.com/wsdl/types/" type="q69:guid" />
+      <xs:choice minOccurs="1" maxOccurs="1">
+        <xs:element minOccurs="0" maxOccurs="1" name="PasswordChangeSuccessResult" type="tns:PasswordChangeSuccessResult" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PasswordChangeFailedResult" type="tns:PasswordChangeFailedResult" />
+      </xs:choice>
+      <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PasswordChangeSuccessResult">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="UserIdentityId" xmlns:q70="http://microsoft.com/wsdl/types/" type="q70:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PasswordChangeFailedResult">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Reason" type="tns:PasswordChangeFailureReason" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PasswordChangeFailureReason">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ProtocolViolation" />
+      <xs:enumeration value="PasswordChangeCancelled" />
+      <xs:enumeration value="AccountHardLocked" />
+      <xs:enumeration value="ValidationFailed" />
+      <xs:enumeration value="SessionExpired" />
+      <xs:enumeration value="UserNotSignedIn" />
+      <xs:enumeration value="AccountExpired" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StartManageAuthorisationAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:StartManageAuthorisationAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StartManageAuthorisationAttemptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SuccessUri" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FailureUri" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CancelAllowed" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TemplateName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CaptchaTheme" type="tns:CaptchaTheme" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DisplayAll" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StartManageAuthorisationAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="StartManageAuthorisationAttemptResult" type="tns:StartManageAuthorisationAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StartManageAuthorisationAttemptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ManageAuthorisationAttemptId" xmlns:q71="http://microsoft.com/wsdl/types/" type="q71:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RedirectUri" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndManageAuthorisationAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:EndManageAuthorisationAttemptRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EndManageAuthorisationAttemptRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ResultId" xmlns:q72="http://microsoft.com/wsdl/types/" type="q72:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndManageAuthorisationAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="EndManageAuthorisationAttemptResult" type="tns:EndManageAuthorisationAttemptResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EndManageAuthorisationAttemptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ManageAuthorisationAttemptId" xmlns:q73="http://microsoft.com/wsdl/types/" type="q73:guid" />
+      <xs:choice minOccurs="1" maxOccurs="1">
+        <xs:element minOccurs="0" maxOccurs="1" name="ManageAuthorisationSuccessResult" type="tns:ManageAuthorisationSuccessResult" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ManageAuthorisationFailedResult" type="tns:ManageAuthorisationFailedResult" />
+      </xs:choice>
+      <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Culture" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ManageAuthorisationSuccessResult">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="UserIdentityId" xmlns:q74="http://microsoft.com/wsdl/types/" type="q74:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ManageAuthorisationFailedResult">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Reason" type="tns:ManageAuthorisationFailureReason" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ManageAuthorisationFailureReason">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ProtocolViolation" />
+      <xs:enumeration value="ManageAuthorisationCancelled" />
+      <xs:enumeration value="SessionExpired" />
+      <xs:enumeration value="UserNotSignedIn" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SessionRemoveParticipant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:SessionRemoveParticipantRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SessionRemoveParticipantRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="SessionId" xmlns:q75="http://microsoft.com/wsdl/types/" type="q75:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SessionRemoveParticipantResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SessionRemoveParticipantResult" type="tns:SessionRemoveParticipantResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SessionRemoveParticipantResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SessionSignOff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:SessionSignOffRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SessionSignOffRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="SessionId" xmlns:q76="http://microsoft.com/wsdl/types/" type="q76:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SessionSignOffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SessionSignOffResult" type="tns:SessionSignOffResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SessionSignOffResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SessionExtend">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:SessionExtendRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SessionExtendRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="SessionId" xmlns:q77="http://microsoft.com/wsdl/types/" type="q77:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SessionExpiry" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SessionExtendResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SessionExtendResult" type="tns:SessionExtendResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SessionExtendResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="UserAuthenticationToken" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SessionExpiry" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExpiryDue" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActivationLinkContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:ActivationLinkContextRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ActivationLinkContextRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ActivationId" xmlns:q78="http://microsoft.com/wsdl/types/" type="q78:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActivationLinkContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ActivationLinkContextResult" type="tns:ActivationLinkContextResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ActivationLinkContextResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ActivationId" xmlns:q79="http://microsoft.com/wsdl/types/" type="q79:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfActivationLinkContextItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfActivationLinkContextItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Item" type="tns:ActivationLinkContextItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActivationLinkContextItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAuthorizationSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetAuthorizationSummaryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetAuthorizationSummaryRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q80="http://microsoft.com/wsdl/types/" type="q80:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" nillable="true" xmlns:q81="http://microsoft.com/wsdl/types/" type="q81:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAuthorizationSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetAuthorizationSummaryResult" type="tns:GetAuthorizationSummaryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetAuthorizationSummaryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ClientAuthorizations" type="tns:ArrayOfClientAuthorization" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfClientAuthorization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientAuthorization" type="tns:ClientAuthorization" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ClientAuthorization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ClientApplicationNames" type="tns:ArrayOfCultureSpecificValue1" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ClientInstanceAuthorizations" type="tns:ArrayOfClientInstanceAuthorization" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DefaultClientApplicationName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ClientType" type="tns:ClientType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCultureSpecificValue1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientApplicationName" type="tns:CultureSpecificValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfClientInstanceAuthorization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientInstanceAuthorization" type="tns:ClientInstanceAuthorization" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ClientInstanceAuthorization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Authorizations" type="tns:ArrayOfAuthorization" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DeviceName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAuthorization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Authorization" type="tns:Authorization" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Authorization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PermissionSets" type="tns:AuthorizationPermissionSet" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" xmlns:q82="http://microsoft.com/wsdl/types/" type="q82:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="GrantedAt" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExpiresAt" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuthorizationPermissionSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="PermissionSetDisplayDescriptions" type="tns:ArrayOfCultureSpecificValue2" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dummy" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCultureSpecificValue2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PermissionSetDisplayDescription" type="tns:CultureSpecificValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ClientType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Web" />
+      <xs:enumeration value="Desktop" />
+      <xs:enumeration value="Mobile" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GetAuthorizedClients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetAuthorizedClientsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetAuthorizedClientsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q83="http://microsoft.com/wsdl/types/" type="q83:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WebApplicationId" nillable="true" xmlns:q84="http://microsoft.com/wsdl/types/" type="q84:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAuthorizedClientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetAuthorizedClientsResult" type="tns:GetAuthorizedClientsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetAuthorizedClientsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="AuthorizedClientSummaries" type="tns:ArrayOfAuthorizedClientSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAuthorizedClientSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AuthorizedClientSummary" type="tns:AuthorizedClientSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuthorizedClientSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ClientApplicationNames" type="tns:ArrayOfCultureSpecificValue1" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Id" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="LastUsed" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAuthorizationsForClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetAuthorizationsForClientRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetAuthorizationsForClientRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdentityId" xmlns:q85="http://microsoft.com/wsdl/types/" type="q85:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ClientId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAuthorizationsForClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetAuthorizationsForClientResult" type="tns:GetAuthorizationsForClientResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetAuthorizationsForClientResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ClientAuthorizationSummaries" type="tns:ArrayOfAuthorizationSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAuthorizationSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientAuthorizationSummary" type="tns:AuthorizationSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuthorizationSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="PermissionSets" type="tns:ArrayOfAuthorizationPermissionSet" />
+      <xs:element minOccurs="1" maxOccurs="1" name="AuthorizationId" xmlns:q86="http://microsoft.com/wsdl/types/" type="q86:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DeviceName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="LastUsed" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAuthorizationPermissionSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PermissionSet" type="tns:AuthorizationPermissionSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RevokeAuthorization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:RevokeAuthorizationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RevokeAuthorizationRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="AuthorizationId" xmlns:q87="http://microsoft.com/wsdl/types/" type="q87:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RevokeAuthorizationResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="WebGetAuthorizationSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetAuthorizationSummaryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGetAuthorizationSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="WebGetAuthorizationSummaryResult" type="tns:GetAuthorizationSummaryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGetAuthorizedClients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetAuthorizedClientsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGetAuthorizedClientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="WebGetAuthorizedClientsResult" type="tns:GetAuthorizedClientsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGetAuthorizationsForClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetAuthorizationsForClientRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGetAuthorizationsForClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="WebGetAuthorizationsForClientResult" type="tns:GetAuthorizationsForClientResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebRevokeAuthorization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="request" type="tns:RevokeAuthorizationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebRevokeAuthorizationResponse">
+    <xs:complexType />
+  </xs:element>
+</xs:schema>

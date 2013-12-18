@@ -1,0 +1,8 @@
+Une nouvelle autorisation du client a été créé pour une application Web que vous êtes un administrateur du client Autorisation de.
+
+Nouveaux renseignements sur les clients d'autorisation:
+Créé par: {created_by}
+Date de création: {created_date}
+Web Application Id: {web_application_id}
+Nom du client d'autorisation: {auth_client_name}
+Autorisation du client Rediriger Uri: {auth_client_redirect_uri}

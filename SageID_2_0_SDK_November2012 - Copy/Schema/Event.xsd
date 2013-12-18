@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by DAVE BANKS (SAGE UK LTD) -->
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:complexType name="Event">
+		<xs:annotation>
+			<xs:documentation>Represents a SageSSO event notification.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Id" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>The unique identifier for the event.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Class" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The class of entity that the event refers to.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Action" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The operation that has been applied to the entity in order to cause the event to be generated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Timestamp" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>The date and time that the event was generated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Properties" type="tns:Property" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The event properties.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Property">
+		<xs:annotation>
+			<xs:documentation>Represents a property on a SageSSO event notification.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The descriptive name of the property.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Value" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The value of the property.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

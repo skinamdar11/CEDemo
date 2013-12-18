@@ -1,0 +1,8 @@
+A new Authorization Client has been created for a Web Application that you are an Authorization Client Administrator of.
+
+New Authorization Client details:
+Created by: {created_by}
+Created date: {created_date}
+Web Application Id: {web_application_id}
+Authorization Client Name: {auth_client_name}
+Authorization Client Redirect Uri: {auth_client_redirect_uri}

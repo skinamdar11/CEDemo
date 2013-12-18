@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <% if (!String.IsNullOrEmpty((string)ViewData[WebSignOn.Application.Infrastructure.TemplateWebFormViewEngine.TemplateNameViewDataKey]))
+       { %>
+    <link rel="SHORTCUT ICON" href="/TemplateOAuth/<%=ViewData[WebSignOn.Application.Infrastructure.TemplateWebFormViewEngine.TemplateNameViewDataKey]%>/favicon.ico"/>
+    <% } %>
+    <link rel="stylesheet" type="text/css" href="/Content/oauth.css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/Content/ie6fix.css" /><![endif]-->
+    <!--[if IE]><style type="text/css">body {behavior: url(/Scripts/csshover3.htc);}</style><![endif]-->
+
+    <script type="text/javascript">/* <![CDATA[ */if (top != self) { window.document.write("<style>body * { display:none !important; }<\/style><a href=\"#\" onclick=\"top.location = self.location\" style=\"display: block !important; padding: 10px\"><img src=\"\/Images\/sagecj.gif\" style=\"display:block !important\"><\/i>Click to Continue<\/a>"); }/* ]]> */</script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-1.4.4.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/xVal.jquery.validate.js") %>"></script>
+
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            var inp = $('.input-validation-error:first').get(0);
+            if (inp) inp.focus();
+        });
+    </script>
+
+    <!-- <%= DateTime.UtcNow.ToString() %> UTC -->
+
+</head>
+<body>
+    <div id="clickOverlay" class="clickOverlay">
+        <br />
+    </div>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    <asp:ContentPlaceHolder ID="FooterContent" runat="server" />
+    <script type='text/javascript'>
+    <!--
+        $(document).delegate('form', 'submit', function () {
+            if ($('form').valid()) {
+                document.getElementById("clickOverlay").style.display = 'inline-block';
+            }
+        });
+    //-->
+    </script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.simplemodal-1.3.5.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/confirm.js") %>"></script>
+</body>
+</html>

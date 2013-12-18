@@ -1,0 +1,45 @@
+﻿*{
+	margin: 0;
+	padding: 0;	
+}
+
+body{
+	margin: 1cm;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 13pt;
+}
+
+img{
+	border: 0;
+}
+
+#headerContainer, #tabMenu, #leftMenu, #breadcrumb, #contentBorderTop, #footer, #contentRight {
+	display: none;
+}
+
+#printLogo
+{
+	display: block;
+	/*margin-top: -5cm;*/
+	margin-left: -0.75cm;
+}
+
+#content{
+		margin-left: -5cm;
+}
+
+#contentOneCol {
+	/*margin-left: -6cm;*/
+}
+
+#contentOneCol p, #contentOneCol ul{
+	/*font-size: 13pt;*/
+}
+
+#content ul {
+	list-style: url(/Images/bullet-green.gif);
+	padding-left: 1cm;
+}
+
+
+

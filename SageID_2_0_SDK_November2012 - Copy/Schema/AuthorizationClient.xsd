@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 rel. 2 sp1 (x64) (http://www.altova.com) by blah blah (Sage) -->
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="Guid.xsd"/>
+	<xs:include schemaLocation="Updateable.xsd"/>
+	<xs:include schemaLocation="CultureSpecificValue.xsd"/>
+	<xs:complexType name="AuthorizationClient">
+		<xs:annotation>
+			<xs:documentation>A type which represents a client application that integrates with SageSSO for authorization.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tns:Updateable">
+				<xs:sequence>
+					<xs:element name="Id" type="ms:guid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The unique Id for this authorization client.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DateCreated" type="xs:dateTime" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The date that this client was created in SageSSO.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="WebApplicationId" type="ms:guid">
+						<xs:annotation>
+							<xs:documentation>The unique Id of the associated SageSSO web application.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ClientId">
+						<xs:annotation>
+							<xs:documentation>The externally visible client Id.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="32"/>
+								<xs:minLength value="0"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="DefaultRedirectUri">
+						<xs:annotation>
+							<xs:documentation>The default Uri that the client will be redirected to.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minLength value="0"/>
+								<xs:maxLength value="256"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="RedirectUris" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A collection of alternative redirect Uris.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="RedirectUri" maxOccurs="unbounded">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="256"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="DefaultDisplayName" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The default culture-agnostic display name.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="LocalisedDisplayNames" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A list of culture-specific display names for the application. A name from this list will be displayed to the user when signing onto the application.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="DisplayName" type="tns:CultureSpecificValue" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:documentation>A culture-specific display name for the application.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="AllowSkipAuthorization" type="xs:boolean">
+						<xs:annotation>
+							<xs:documentation>A flag to indicate whether or not the application should be able to skip the authorization grant/deny selection automatically. This is typically used in a fully trusted client scenario.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WebAuthorizationClient">
+		<xs:annotation>
+			<xs:documentation>A web client application that integrates with SageSSO for authorization.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tns:AuthorizationClient">
+				<xs:sequence>
+					<xs:element name="AuthenticationType" type="tns:AuthenticationType">
+						<xs:annotation>
+							<xs:documentation>The way in which the Web client authenticates with SageId</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:choice>
+						<xs:element name="X509Authentication" type="tns:X509AuthenticationInfo"/>
+						<xs:element name="SecretKeyAuthentication" type="tns:SecretKeyAuthenticationInfo"/>
+					</xs:choice>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DesktopAuthorizationClient">
+		<xs:annotation>
+			<xs:documentation>A desktop client application that integrates with SageSSO for authorization.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tns:AuthorizationClient"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MobileAuthorizationClient">
+		<xs:annotation>
+			<xs:documentation>A mobile client application that integrates with SageSSO for authorization.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tns:AuthorizationClient">
+				<xs:sequence>
+					<xs:element name="AuthenticationType" type="tns:AuthenticationType">
+						<xs:annotation>
+							<xs:documentation>The way in which the client will authenticate with SageSSO.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="X509AuthenticationInfo">
+		<xs:sequence>
+			<xs:element name="Subject" type="xs:string"/>
+			<xs:element name="Issuer" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SecretKeyAuthenticationInfo">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>A descriptive name for the secret key </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Key">
+				<xs:annotation>
+					<xs:documentation>The key string</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="16"/>
+						<xs:maxLength value="256"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="AuthenticationType">
+		<xs:annotation>
+			<xs:documentation>Describes the manner in which a client application authenticates with SageSSO.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="X509"/>
+			<xs:enumeration value="SecretKey"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="WebAuthorizationClient" type="tns:WebAuthorizationClient"/>
+	<xs:element name="DesktopAuthorizationClient" type="tns:DesktopAuthorizationClient"/>
+	<xs:element name="MobileAuthorizationClient" type="tns:MobileAuthorizationClient"/>
+</xs:schema>

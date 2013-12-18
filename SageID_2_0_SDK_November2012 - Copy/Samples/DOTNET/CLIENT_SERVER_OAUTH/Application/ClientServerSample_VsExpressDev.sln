@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientServerSample.Client_VsExpressDev", "ClientServerSample.Client\ClientServerSample.Client_VsExpressDev.csproj", "{C193A485-F13D-4029-903A-29F8D284FE7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientServerSample.Server_VsExpressDev", "ClientServerSample.Server\ClientServerSample.Server_VsExpressDev.csproj", "{55FF4DF2-BFFE-432E-9839-4497F6A7FB81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C193A485-F13D-4029-903A-29F8D284FE7F}.Debug|x86.ActiveCfg = Debug|x86
+		{C193A485-F13D-4029-903A-29F8D284FE7F}.Debug|x86.Build.0 = Debug|x86
+		{C193A485-F13D-4029-903A-29F8D284FE7F}.Release|x86.ActiveCfg = Release|x86
+		{C193A485-F13D-4029-903A-29F8D284FE7F}.Release|x86.Build.0 = Release|x86
+		{55FF4DF2-BFFE-432E-9839-4497F6A7FB81}.Debug|x86.ActiveCfg = Debug|x86
+		{55FF4DF2-BFFE-432E-9839-4497F6A7FB81}.Debug|x86.Build.0 = Debug|x86
+		{55FF4DF2-BFFE-432E-9839-4497F6A7FB81}.Release|x86.ActiveCfg = Release|x86
+		{55FF4DF2-BFFE-432E-9839-4497F6A7FB81}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

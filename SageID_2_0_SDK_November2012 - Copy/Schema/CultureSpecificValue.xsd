@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by DAVE BANKS (SAGE UK LTD) -->
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:complexType name="CultureSpecificValue">
+		<xs:annotation>
+			<xs:documentation>A type which holds a string value which is specific to a given culture.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Culture" type="tns:ISOCultureCode">
+				<xs:annotation>
+					<xs:documentation>A code which represents language (using the ISO 639-2 two-letter code) followed by country (using the ISO 3166-1 two-letter code) in the format languageCode-countryCode. An empty culture element specifies the invariant or default culture.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Value" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>A string value of arbitrary length. May be empty but not null.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ISOCultureCode">
+		<xs:annotation>
+			<xs:documentation>A code which represents language (using the ISO 639-2 two-letter code) followed by country (using the ISO 3166-1 two-letter code) in the format languageCode-countryCode. An empty culture element specifies the invariant or default culture.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(([a-zA-Z][a-zA-Z]-[a-zA-Z][a-zA-Z])?)"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

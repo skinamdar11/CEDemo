@@ -1,0 +1,125 @@
+﻿/*	
+	DEAFULT SSO template style sheet
+*/
+
+.applist li 
+{
+	margin-top: 0px;
+	margin-bottom: -10px;
+}
+.applist
+{
+	margin-bottom: 20px;
+}
+
+/* 
+	Text boxes - SSO fields
+*/
+#sso_DisplayName
+{
+	width: 295px;
+}
+#sso_Password, #sso_NewPassword
+{
+	width: 295px;
+}
+#sso_Captcha 
+{
+	width: 295px;
+}
+#sso_ConfirmPassword, #sso_Email
+{
+	width: 295px;
+}
+#sso_SecurityQuestion1, #sso_SecurityQuestion2, #sso_SecurityQuestion3
+{
+	width: auto;
+}
+#sso_SecurityAnswer1, #sso_SecurityAnswer2, #sso_SecurityAnswer3
+{
+	width: 295px;
+}
+#sso_RecoveryAnswer1, #sso_RecoveryAnswer2
+{
+	width: 295px;
+}
+.fixed_label_width 
+{
+	width: 3.8em;
+	float: left;
+	margin-right: 0.5em;
+	display: block
+}
+.fixed_label_width_big
+{
+	width: 12em;
+	float: left;
+	margin-right: 0.5em;
+	display: block
+}
+
+/* 
+	Button Styles - Submit buttons
+*/
+.submit
+{
+    background: transparent url(/Template/Sage/images/bg_button.png) no-repeat;
+    display: inline-block;
+    border: none;
+    height: 29px;
+    width: 94px;
+    margin: 12px 0px 6px;
+    padding: 2px 5px 4px;
+    line-height: 23px;
+    color: #414141;
+    cursor: pointer;
+}
+.submit:hover
+{
+    background: url(/Template/Sage/images/bg_button.png) 0 -29px no-repeat;
+}
+.submit140
+{
+    background: transparent url(/Template/Sage/images/bg_button_140.png) no-repeat;
+    display: inline-block;
+    border: none;
+    height: 29px;
+    width: 140px;
+    margin: 12px 0px 6px;
+    padding: 2px 8px 4px;
+    line-height: 23px;
+    color: #024731;
+    cursor: pointer;
+}
+.submit140:hover
+{
+    background: url(/Template/Sage/images/bg_button_140.png) 0 -29px no-repeat;
+}
+/* 
+	Button Styles - Cancel buttons
+*/
+.cancel 
+{
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 13px;
+	background: transparent url(/Template/Sage/images/bg_button.png) no-repeat scroll 0 0;
+	border: medium none;
+	color: #024731;
+	cursor: pointer;
+	display: inline-block;
+	height: 23px;
+	line-height: 23px;
+	margin: 12px 2px 6px 12px;
+	padding: 3px 0;
+	text-align: center;
+	text-decoration: none;
+	width: 94px;
+}
+.cancel:hover
+{
+    background: url(/Template/Sage/images/bg_button.png) 0 -29px no-repeat;
+    color: #024731;
+}

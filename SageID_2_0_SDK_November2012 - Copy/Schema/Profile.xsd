@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by DAVE BANKS (SAGE UK LTD) -->
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="Guid.xsd"/>
+	<xs:include schemaLocation="Principal.xsd"/>
+	<xs:include schemaLocation="Updateable.xsd"/>
+	<xs:complexType name="Profile">
+		<xs:annotation>
+			<xs:documentation>A SageSSO profile.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tns:Updateable">
+				<xs:sequence>
+					<xs:element name="Id" type="ms:guid">
+						<xs:annotation>
+							<xs:documentation>The unique ID for this identity. The ID will not change for the lifetime of the identity.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DateCreated" type="xs:dateTime">
+						<xs:annotation>
+							<xs:documentation>The date that the identity was first created in the SageSSO system.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Items" type="tns:ProfileItem" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProfileItem">
+		<xs:annotation>
+			<xs:documentation>A SageSSO profile item.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The name of the profile item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Value" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The value of the profile item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Profile" type="tns:Profile"/>
+	<xs:element name="ProfileItem" type="tns:ProfileItem"/>
+</xs:schema>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tns="http://sso.sage.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ms="http://microsoft.com/wsdl/types/" targetNamespace="http://sso.sage.com" elementFormDefault="qualified">
+	<xs:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="Guid.xsd"/>
+	<xs:include schemaLocation="Principal.xsd"/>
+	<xs:include schemaLocation="WebApplication.xsd"/>
+	<xs:element name="Session" type="tns:Session">
+		<xs:annotation>
+			<xs:documentation>A element which defines a SageSSO single sign-on session.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="Session">
+		<xs:annotation>
+			<xs:documentation>A type which defines a SageSSO single sign-on session.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Id" type="ms:guid">
+				<xs:annotation>
+					<xs:documentation>The unique ID of the session. This ID is guaranteed never to repeat.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UserPrincipal" type="tns:UserPrincipal">
+				<xs:annotation>
+					<xs:documentation>The user for whom the session has been established.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CreatedAt" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>The time at which the session was first established.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExpiresAfter" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>The time after which the session will expire. This value may change if the session is extended by one of the participant applications.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ParticipantWebApplications">
+				<xs:annotation>
+					<xs:documentation>The list of web applications which are currently participants in the SSO session. This list may change as web applications attach to or leave the SSO session.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="WebApplication" type="tns:WebApplication" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>A web application which is a participant in the SSO session.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

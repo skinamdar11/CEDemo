@@ -1,0 +1,5 @@
+﻿Bonjour {username},
+
+Votre compte a été créé, mais n'est pas encore activée. Pour continuer, s'il vous plaît ouvrez le lien suivant dans votre navigateur web:
+
+{link_continue}

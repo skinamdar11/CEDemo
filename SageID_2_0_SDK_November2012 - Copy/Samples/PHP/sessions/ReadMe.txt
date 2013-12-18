@@ -1,0 +1,1 @@
+This folder is for storing the local session data, don't change any of the files stored here.

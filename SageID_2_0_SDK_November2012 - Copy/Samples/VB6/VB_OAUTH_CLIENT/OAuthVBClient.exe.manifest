@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+<assemblyIdentity
+    type = "win32"
+    name = "OAuthVBClient"
+    version = "1.0.0.0" />
+<dependency>
+    <dependentAssembly>
+        <assemblyIdentity
+            name="Sage.Authorisation"
+            version="1.0.0.0"
+            publicKeyToken="3315e75064bf7add"/>
+    </dependentAssembly>
+</dependency>
+<dependency>
+    <dependentAssembly>
+        <assemblyIdentity
+            name="Sage.Authorisation.Client"
+            version="1.0.0.0"
+            publicKeyToken="3315e75064bf7add"/>
+    </dependentAssembly>
+</dependency>
+<dependency>
+    <dependentAssembly>
+        <assemblyIdentity
+            name="Sage.Authorisation.Server"
+            version="1.0.0.0"
+            publicKeyToken="3315e75064bf7add"/>
+    </dependentAssembly>
+</dependency>
+</assembly>
